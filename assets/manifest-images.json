@@ -1,0 +1,123 @@
+{
+  "images": [
+    {
+      "filename": "1 Palac de Just web.jpg",
+      "alt": "Palacio de Justicia - Fachada principal",
+      "description": "Imagen principal del Palacio de Justicia utilizada en el hero de la página principal",
+      "widths": [360, 640, 900, 1200, 1600, 2400],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "hero"
+    },
+    {
+      "filename": "2 T Colon web.jpg",
+      "alt": "Teatro Colón - Fachada histórica",
+      "description": "Imagen del Teatro Colón utilizada en la sección Quiénes Somos",
+      "widths": [360, 640, 900, 1200, 1600, 2400],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "about"
+    },
+    {
+      "filename": "3 Puerto M web.jpg",
+      "alt": "Puerto Madero - Distrito financiero",
+      "description": "Imagen de Puerto Madero utilizada en la página de contacto",
+      "widths": [360, 640, 900, 1200, 1600, 2400],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "contact"
+    },
+    {
+      "filename": "4 Acero web.jpg",
+      "alt": "Industria del acero - Sector empresarial",
+      "description": "Imagen representativa del sector industrial utilizada en áreas de práctica",
+      "widths": [360, 640, 900, 1200, 1600, 2400],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "practice-areas"
+    },
+    {
+      "filename": "5 Campo G web.jpg",
+      "alt": "Campo ganadero - Sector agropecuario",
+      "description": "Imagen del campo argentino utilizada en la sección del equipo",
+      "widths": [360, 640, 900, 1200, 1600, 2400],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "team"
+    },
+    {
+      "filename": "6 Campo T web.jpg",
+      "alt": "Campo tradicional - Paisaje rural",
+      "description": "Imagen decorativa del campo argentino para secciones alternativas",
+      "widths": [360, 640, 900, 1200, 1600, 2400],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "decorative"
+    },
+    {
+      "filename": "7 Ptroleo web.jpg",
+      "alt": "Industria petrolera - Sector energético",
+      "description": "Imagen representativa del sector energético para áreas especializadas",
+      "widths": [360, 640, 900, 1200, 1600, 2400],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "practice-areas"
+    },
+    {
+      "filename": "logo.avif",
+      "alt": "Logo Estudio Salvi",
+      "description": "Logo principal del Estudio Salvi en formato AVIF",
+      "widths": [40, 72, 100, 200, 300],
+      "formats": ["avif", "png"],
+      "category": "logo"
+    },
+    {
+      "filename": "sobrenosotros.avif",
+      "alt": "Historia del Estudio Salvi",
+      "description": "Imagen representativa para la sección Quiénes Somos",
+      "widths": [360, 640, 900, 1200, 1600, 2400],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "about"
+    },
+    {
+      "filename": "MariaFiorito.avif",
+      "alt": "Dra. María Fiorito - Socia",
+      "description": "Foto profesional de la Dra. María Fiorito",
+      "widths": [72, 150, 300, 600, 1000],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "team-member"
+    },
+    {
+      "filename": "MatiasMoran.avif",
+      "alt": "Dr. Matías Morán - Socio",
+      "description": "Foto profesional del Dr. Matías Morán",
+      "widths": [72, 150, 300, 600, 1000],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "team-member"
+    },
+    {
+      "filename": "OscarSalvi.avif",
+      "alt": "Dr. Oscar M. Salvi - Socio fundador",
+      "description": "Foto profesional del Dr. Oscar M. Salvi",
+      "widths": [72, 150, 300, 600, 1000],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "team-member"
+    },
+    {
+      "filename": "SantiagoVaccaro.avif",
+      "alt": "Dr. Santiago Vaccaro - Socio",
+      "description": "Foto profesional del Dr. Santiago Vaccaro",
+      "widths": [72, 150, 300, 600, 1000],
+      "formats": ["avif", "webp", "jpg"],
+      "category": "team-member"
+    }
+  ],
+  "optimization": {
+    "note": "Para generar las versiones optimizadas de imágenes, utiliza herramientas como ImageMagick, cwebp (WebP) o avifenc (AVIF).",
+    "commands": {
+      "resize": "convert 'original.jpg' -resize 360x360 '360/original.jpg'",
+      "webp": "cwebp -q 85 'original.jpg' -o 'original.webp'",
+      "avif": "avifenc --min 23 --max 35 --minalpha 23 --maxalpha 35 'original.jpg' 'original.avif'"
+    },
+    "recommended_tools": [
+      "ImageMagick (para resize)",
+      "libwebp (cwebp para WebP)",
+      "libavif (avifenc para AVIF)"
+    ]
+  },
+  "last_updated": "2024-10-07"
+}
+
