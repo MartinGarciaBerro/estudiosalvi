@@ -1,51 +1,41 @@
-# Estudio Salvi – Sitio estático
+# Estudio Salvi – Guía de mantenimiento
 
-Home pública desarrollada con HTML5 semántico, CSS externo y JavaScript vanilla.
+Sitio estático en HTML5, CSS3 y JavaScript vanilla con foco en accesibilidad AA y performance móvil.
 
 ## Estructura
 
-- `index.html`: página principal con hero, quiénes somos, áreas, equipo y contacto.
-- `assets/css/style.css`: estilos base (layout y componentes).
-- `assets/css/overrides.css`: tema verde #A7C7A7, tipografías Playfair/Inter, focos y hovers.
-- `assets/js/main.js`: interacciones (menú móvil, reveal on scroll, smooth scroll, CTA sticky, validación si hay formulario).
-- `img/`: imágenes del sitio (hero, equipo, ilustrativas).
+- `index.html`: home con hero, áreas, equipo destacado y bloque de contacto.
+- `quienes-somos.html`: historia, misión, visión y valores del estudio.
+- `equipo.html`: perfiles del equipo en tarjetas responsivas.
+- `clientes.html`: sectores de atención, testimonios y métricas.
+- `contacto.html`: datos de contacto y formulario accesible.
+- `assets/css/style.css`: sistema de diseño, tokens y componentes.
+- `assets/js/app.js`: menú móvil, reveal progresivo y validación ligera.
+- `img/`: assets gráficos (mantener pesos optimizados).
+- `sitemap.xml` y `robots.txt`: SEO técnico básico.
 
-## Editar contenidos
+## Estilos y diseño
 
-- Hero (`<section class="hero">`):
-  - Título y subtítulo en el contenedor.
-  - Fondo: cambiar `background:url('img/1 Palac de Just web.jpg')`.
-- Quiénes somos (`#quienes-somos`): editar texto e imagen lateral (`img/sobrenosotros.avif` o `img/2 T Colon web.jpg`).
-- Áreas (`#areas`): cada card es un `<li>` dentro de `.grid-list` con enlace a `/areas.html`.
-- Equipo (`#equipo`): cada miembro es un `<article class="person-card">` con foto, nombre, cargo y enlace `/equipo/[slug].html`.
-- Contacto (`#contacto`): actualizar dirección, teléfonos, email y CTA. Fondo decorativo en estilo inline.
+- Tokens en `:root` para colores, espaciados y sombras.
+- Tipografías Playfair Display (títulos) e Inter (texto) con `font-display: swap`.
+- Utilidades `.container`, `.stack`, `.grid`, `.card-persona`, etc. para layout consistente.
+- Header sticky con foco visible, skip-link y botones fluidos.
 
-## SEO
+## Accesibilidad y buenas prácticas
 
-- `<title>` y `<meta name="description">` en `<head>`.
-- Open Graph/Twitter: `og:title`, `og:description`, `og:image` y `twitter:*`.
-- JSON-LD `LegalService`: actualizar `name`, `telephone`, `address`, `logo` en el bloque `<script type="application/ld+json">`.
+- Un único `<h1>` por página y jerarquía secuencial.
+- Formularios con `aria-live` para feedback y estados `aria-invalid`.
+- Imágenes con dimensiones fijas y `loading="lazy"` donde aplica.
+- Soporte `prefers-reduced-motion` y navegación por teclado.
 
-## Tipografías y estilos
+## Scripts
 
-- Playfair Display (títulos) e Inter (cuerpo) importadas en `assets/css/overrides.css`.
-- Acento configurable en `:root` de `overrides.css`.
-
-## Accesibilidad
-
-- `lang="es-AR"` en `<html>`.
-- Roles ARIA en `header`, `nav`, `main`, `footer`.
-- Foco visible en enlaces y botones; `skip-link` al inicio.
-
-## JS e interacciones
-
-`assets/js/main.js` inicializa automáticamente:
-- Menú hamburguesa (`.nav-toggle`, `.site-nav`).
-- Reveal on scroll (`[data-reveal]`).
-- Smooth scroll por CSS (+ manejo de hash).
-- CTA sticky en móvil (`.sticky-cta`).
-- Validación solo si existe `.contact-form`.
+`assets/js/app.js` inicializa automáticamente:
+- Menú hamburguesa (`.nav-toggle`, `#site-nav`).
+- Animaciones progresivas (`[data-reveal]` y `.fade-in`).
+- Validación genérica para formularios con `novalidate`.
+- Actualización del año en el footer.
 
 ## Desarrollo
 
-Abrí `index.html` en el navegador. No requiere dependencias ni build.
+Abrí cualquier archivo `.html` directamente en el navegador. No requiere build ni dependencias externas.

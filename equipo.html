@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nuestro Equipo | Estudio Salvi - Abogados penalistas</title>
     <meta name="description" content="Conoce nuestro equipo de abogados especialistas en derecho penal. Profesionales con sólida formación académica y amplia experiencia.">
+    <link rel="canonical" href="https://www.estudiosalvi.com.ar/equipo">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -13,12 +14,16 @@
     <meta property="og:image" content="img/OscarSalvi.avif">
     <meta property="og:locale" content="es_AR">
 
-    <!-- CSS principal y overrides -->
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS principal -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/overrides.css">
-    
-    <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Iconografía -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer">
 
     <!-- Favicon -->
     <link rel="icon" href="img/logo.avif" type="image/avif">
@@ -26,137 +31,113 @@
   <body>
     <a href="#main" class="skip-link">Saltar al contenido</a>
 
-    <!-- Header / Navegación -->
     <header class="site-header" role="banner">
       <div class="container header-content">
         <a href="./index.html" class="brand" aria-label="Inicio Estudio Salvi">
-          <img src="img/logo.avif" alt="Estudio Salvi" style="height: 40px; width: auto;">
+          <img src="img/logo.avif" alt="Estudio Salvi" width="120" height="40">
         </a>
 
         <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú de navegación">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
         <nav id="site-nav" class="site-nav" role="navigation" aria-label="Navegación principal">
           <ul>
             <li><a href="./index.html">Inicio</a></li>
             <li><a href="./quienes-somos.html">Quiénes somos</a></li>
-            <li><a href="./equipo.html">Equipo</a></li>
+            <li><a href="./equipo.html" aria-current="page">Equipo</a></li>
             <li><a href="./clientes.html">Clientes</a></li>
-            <li><a href="./index.html#contacto">Contacto</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main id="main" role="main">
-      <!-- Hero de la página -->
-      <section class="hero-small" aria-label="Nuestro Equipo - Estudio Salvi">
-        <div class="hero-bg" style="background-image: url('img/6 Campo T web.jpg')"></div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
+      <section class="hero-small" style="background-image: url('img/6 Campo T web.jpg');" aria-label="Nuestro Equipo - Estudio Salvi">
+        <div class="container stack" data-reveal>
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="./index.html">Inicio</a>
+            <span aria-current="page">Nuestro Equipo</span>
+          </nav>
           <h1>Nuestro Equipo</h1>
           <p class="lead">Profesionales con formación académica sólida y amplia experiencia en derecho penal</p>
         </div>
       </section>
 
-      <!-- Introducción -->
       <section class="section" aria-labelledby="intro-title">
-        <div class="container">
-          <h2 id="intro-title">Conoce a Nuestros Profesionales</h2>
-          <p class="lead" style="color: var(--color-muted); max-width: 800px; margin: 0 auto; text-align: center;">
-            Desde hace más de veinticinco años formamos parte de un equipo de abogados con una sólida formación académica y una amplia experiencia que nos permite el ejercicio versátil de la profesión en función de los diferentes requerimientos y necesidades de nuestros clientes, líderes en el desarrollo económico, industrial y productivo de la Argentina.
-          </p>
+        <div class="container stack text-center">
+          <h2 id="intro-title" data-reveal>Conoce a Nuestros Profesionales</h2>
+          <p class="lead" data-reveal>Desde hace más de veinticinco años formamos parte de un equipo de abogados con una sólida formación académica y una amplia experiencia que nos permite el ejercicio versátil de la profesión en función de los diferentes requerimientos y necesidades de nuestros clientes, líderes en el desarrollo económico, industrial y productivo de la Argentina.</p>
         </div>
       </section>
 
-      <!-- Equipo -->
-      <section class="section alt section-with-bg" aria-labelledby="equipo-title">
-        <div class="section-bg" style="background-image: url('img/4 Acero web.jpg')"></div>
-        <div class="container section-bg-content">
-          <h2 id="equipo-title"><i class="fas fa-users icon-section icon-equipo"></i>Nuestros Socios</h2>
+      <section class="section" aria-labelledby="equipo-title">
+        <div class="container stack">
+          <h2 id="equipo-title" data-reveal>Nuestros Socios</h2>
           <div class="team-grid">
-            <!-- Oscar Salvi -->
-            <article class="team-card-new" data-reveal>
-              <img class="team-photo" src="img/OscarSalvi.avif" alt="Dr. Oscar Mario Salvi" loading="lazy">
-              <h3 class="team-name"><i class="fas fa-user-tie icon-team icon-miembro"></i>Dr. Oscar Mario Salvi</h3>
-              <p class="team-position">Fundador</p>
-              <p class="team-description-new">
-                Doctor en Derecho con más de 25 años de experiencia en derecho penal. Ex juez federal con distinguida probidad e imparcialidad. Especializado en delitos económicos, compliance corporativo y derecho procesal penal. Su experiencia única combinando la perspectiva judicial con la práctica privada nos permite brindar un servicio integral y estratégico.
-              </p>
-              <div class="team-social">
-                <a href="#" class="social-link" aria-label="LinkedIn de Oscar Salvi">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-              </div>
+            <article class="card-persona" id="oscar-salvi" tabindex="0" aria-label="Perfil de Dr. Oscar Mario Salvi" data-reveal>
+              <picture class="foto" aria-hidden="true">
+                <source srcset="img/OscarSalvi.avif" type="image/avif">
+                <img src="img/OscarSalvi.avif" alt="Retrato de Dr. Oscar Mario Salvi" loading="lazy" width="480" height="560">
+              </picture>
+              <h3>Dr. Oscar Mario Salvi</h3>
+              <p class="rol">Fundador</p>
+              <p class="bio">Doctor en Derecho con más de 25 años de experiencia en derecho penal. Ex juez federal con distinguida probidad e imparcialidad. Especializado en delitos económicos, compliance corporativo y derecho procesal penal. Su experiencia única combinando la perspectiva judicial con la práctica privada nos permite brindar un servicio integral y estratégico.</p>
+              <a class="same-as" href="#" aria-label="LinkedIn de Oscar Salvi">
+                <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+              </a>
             </article>
 
-            <!-- María Fiorito -->
-            <article class="team-card-new" data-reveal>
-              <img class="team-photo" src="img/MariaFiorito.avif" alt="Dra. María Fiorito" loading="lazy">
-              <h3 class="team-name"><i class="fas fa-user-tie icon-team icon-miembro"></i>Dra. María Fiorito</h3>
-              <p class="team-position">Socia</p>
-              <p class="team-description-new">
-                Experta en delitos contra la administración pública y cooperación internacional. Formación especializada en derecho penal internacional y extradición. Amplia experiencia en casos complejos de corrupción y negociaciones incompatibles. Su expertise en derecho internacional complementa perfectamente nuestro servicio integral.
-              </p>
-              <div class="team-social">
-                <a href="#" class="social-link" aria-label="LinkedIn de María Fiorito">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-              </div>
+            <article class="card-persona" id="maria-fiorito" tabindex="0" aria-label="Perfil de Dra. María Fiorito" data-reveal>
+              <picture class="foto" aria-hidden="true">
+                <source srcset="img/MariaFiorito.avif" type="image/avif">
+                <img src="img/MariaFiorito.avif" alt="Retrato de Dra. María Fiorito" loading="lazy" width="480" height="560">
+              </picture>
+              <h3>Dra. María Fiorito</h3>
+              <p class="rol">Socia</p>
+              <p class="bio">Experta en delitos contra la administración pública y cooperación internacional. Formación especializada en derecho penal internacional y extradición. Amplia experiencia en casos complejos de corrupción y negociaciones incompatibles. Su expertise en derecho internacional complementa perfectamente nuestro servicio integral.</p>
+              <a class="same-as" href="#" aria-label="LinkedIn de María Fiorito">
+                <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+              </a>
             </article>
 
-            <!-- Matías Morán -->
-            <article class="team-card-new" data-reveal>
-              <img class="team-photo" src="img/MatiasMoran.avif" alt="Dr. Matías Morán" loading="lazy">
-              <h3 class="team-name"><i class="fas fa-user-tie icon-team icon-miembro"></i>Dr. Matías Morán</h3>
-              <p class="team-position">Socio</p>
-              <p class="team-description-new">
-                Especialista en derecho penal empresarial y compliance. Amplia experiencia en investigaciones internas y prevención de riesgos penales. Experto en programas de integridad corporativa y capacitación en compliance. Su enfoque preventivo ayuda a nuestros clientes empresariales a evitar contingencias penales.
-              </p>
-              <div class="team-social">
-                <a href="#" class="social-link" aria-label="LinkedIn de Matías Morán">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-              </div>
+            <article class="card-persona" id="matias-moran" tabindex="0" aria-label="Perfil de Dr. Matías Morán" data-reveal>
+              <picture class="foto" aria-hidden="true">
+                <source srcset="img/MatiasMoran.avif" type="image/avif">
+                <img src="img/MatiasMoran.avif" alt="Retrato de Dr. Matías Morán" loading="lazy" width="480" height="560">
+              </picture>
+              <h3>Dr. Matías Morán</h3>
+              <p class="rol">Socio</p>
+              <p class="bio">Especialista en derecho penal empresarial y compliance. Amplia experiencia en investigaciones internas y prevención de riesgos penales. Experto en programas de integridad corporativa y capacitación en compliance. Su enfoque preventivo ayuda a nuestros clientes empresariales a evitar contingencias penales.</p>
+              <a class="same-as" href="#" aria-label="LinkedIn de Matías Morán">
+                <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+              </a>
             </article>
 
-            <!-- Santiago Vaccaro -->
-            <article class="team-card-new" data-reveal>
-              <img class="team-photo" src="img/SantiagoVaccaro.avif" alt="Dr. Santiago Vaccaro" loading="lazy">
-              <h3 class="team-name"><i class="fas fa-user-tie icon-team icon-miembro"></i>Dr. Santiago Vaccaro</h3>
-              <p class="team-position">Socio</p>
-              <p class="team-description-new">
-                Especialista en delitos financieros y lavado de activos. Experiencia en casos complejos de mercados de capitales y evasión tributaria. Su expertise en derecho financiero y económico complementa nuestro servicio integral, especialmente en casos de alta complejidad técnica y regulatoria.
-              </p>
-              <div class="team-social">
-                <a href="#" class="social-link" aria-label="LinkedIn de Santiago Vaccaro">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-              </div>
+            <article class="card-persona" id="santiago-vaccaro" tabindex="0" aria-label="Perfil de Dr. Santiago Vaccaro" data-reveal>
+              <picture class="foto" aria-hidden="true">
+                <source srcset="img/SantiagoVaccaro.avif" type="image/avif">
+                <img src="img/SantiagoVaccaro.avif" alt="Retrato de Dr. Santiago Vaccaro" loading="lazy" width="480" height="560">
+              </picture>
+              <h3>Dr. Santiago Vaccaro</h3>
+              <p class="rol">Socio</p>
+              <p class="bio">Especialista en delitos financieros y lavado de activos. Experiencia en casos complejos de mercados de capitales y evasión tributaria. Su expertise en derecho financiero y económico complementa nuestro servicio integral, especialmente en casos de alta complejidad técnica y regulatoria.</p>
+              <a class="same-as" href="#" aria-label="LinkedIn de Santiago Vaccaro">
+                <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+              </a>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- CTA -->
-      <section class="section" aria-labelledby="cta-title">
-        <div class="container" style="text-align: center;">
+      <section class="section alt" aria-labelledby="cta-title">
+        <div class="container stack text-center" data-reveal>
           <h2 id="cta-title">¿Necesitas Asesoramiento Legal?</h2>
-          <p class="lead" style="color: var(--color-muted); margin-bottom: 32px;">
-            Nuestro equipo está listo para brindarte la mejor defensa y asesoramiento en derecho penal.
-          </p>
-          <a class="btn-refined primary" href="./index.html#contacto">Contactar ahora</a>
+          <p class="lead">Nuestro equipo está listo para brindarte la mejor defensa y asesoramiento en derecho penal.</p>
+          <a class="btn primary" href="./contacto.html">Contactar ahora</a>
         </div>
       </section>
     </main>
@@ -164,25 +145,25 @@
     <footer class="site-footer" role="contentinfo">
       <div class="container">
         <div class="footer-content">
-          <div class="footer-brand">
+          <div>
             <div class="footer-brand">Estudio Salvi</div>
-            <p style="color:#9ca3af;margin:0">Defensa penal con trayectoria</p>
+            <p class="small">Defensa penal con trayectoria</p>
           </div>
           <div class="footer-links">
-            <h4 style="color:#ffffff;margin-bottom:16px">Enlaces rápidos</h4>
+            <h3>Enlaces rápidos</h3>
             <ul>
               <li><a href="./index.html">Inicio</a></li>
               <li><a href="./quienes-somos.html">Quiénes somos</a></li>
               <li><a href="./equipo.html">Equipo</a></li>
               <li><a href="./clientes.html">Clientes</a></li>
-              <li><a href="./index.html#contacto">Contacto</a></li>
+              <li><a href="./contacto.html">Contacto</a></li>
             </ul>
           </div>
           <div class="footer-contact">
-            <h4 style="color:#ffffff;margin-bottom:16px">Contacto</h4>
-            <p><strong><i class="fas fa-location-dot icon-footer icon-direccion"></i>Dirección:</strong><br>Arenales 1457, CABA</p>
-            <p><strong><i class="fas fa-phone icon-footer icon-telefono"></i>Teléfono:</strong><br>+54-11-4816-8880<br>+54-11-4816-8881</p>
-            <p><strong><i class="fas fa-envelope icon-footer icon-email"></i>Email:</strong><br><a href="mailto:info@estudiosalvi.com.ar">info@estudiosalvi.com.ar</a></p>
+            <h3>Contacto</h3>
+            <p><strong>Dirección:</strong><br>Arenales 1457, CABA</p>
+            <p><strong>Teléfono:</strong><br>+54-11-4816-8880<br>+54-11-4816-8881</p>
+            <p><strong>Email:</strong><br><a href="mailto:info@estudiosalvi.com.ar">info@estudiosalvi.com.ar</a></p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -191,14 +172,6 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-      // Año dinámico en el footer
-      document.addEventListener('DOMContentLoaded', function(){
-        var y = document.getElementById('year');
-        if (y) y.textContent = new Date().getFullYear();
-      });
-    </script>
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
   </body>
 </html>
