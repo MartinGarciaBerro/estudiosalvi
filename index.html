@@ -85,48 +85,51 @@
     <main id="main" role="main">
       <!-- Hero principal -->
       <section class="hero-full hero-elevated" aria-label="Hero – Estudio Salvi">
-        <div class="hero-overlay" role="presentation"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container hero-layout">
           <div class="hero-copy">
-            <span class="pretitle">Defensa penal estratégica</span>
-            <h1>Estudio Jurídico Penal</h1>
-            <p class="lead">Más de 25 años asesorando y representando a clientes en causas complejas de derecho penal económico, delitos contra la administración pública y compliance corporativo.</p>
-            <div class="hero-actions">
-              <a class="btn-refined primary" href="#contacto">Agendar una consulta</a>
-              <a class="btn-refined accent" href="#areas">Ver áreas de práctica</a>
-            </div>
-            <ul class="hero-trust" aria-label="Principales diferenciales del estudio">
-              <li>
-                <strong>25+ años</strong>
-                <span>de trayectoria en litigios penales</span>
-              </li>
-              <li>
-                <strong>Equipo senior</strong>
-                <span>con experiencia en el fuero federal</span>
-              </li>
-              <li>
-                <strong>Respuesta 24/7</strong>
-                <span>para situaciones urgentes</span>
-              </li>
+            <!-- Refinamos el mensaje principal para respetar el patrón 1 idea + 1 frase corta -->
+            <span class="pretitle">Estudio jurídico penal</span>
+            <h1 style="color: #447e6d;">Defensa penal estratégica</h1>
+            <p class="lead">Asesoría y defensa en causas complejas de penal económico y fuero federal.</p>
+            <ul class="hero-trust hero-chips" aria-label="Diferenciales del estudio">
+              <li><span>25+ años</span></li>
+              <li><span>Equipo senior federal</span></li>
+              <li><span>Respuesta 24/7</span></li>
             </ul>
+            <div class="hero-actions">
+              <a class="btn-refined primary" data-cta="hero_primary" href="#contacto">Agendar una consulta</a>
+              <a class="btn-refined ghost" data-cta="hero_secondary" href="#areas">Ver áreas</a>
+            </div>
           </div>
           <aside class="hero-panel" aria-label="Contacto rápido">
             <div class="hero-panel-card">
-              <h2>Asistencia penal urgente</h2>
-              <p>Atendemos consultas inmediatas para allanamientos, detenciones y medidas cautelares. Coordinamos reuniones presenciales y virtuales.</p>
-              <div class="hero-contact">
-                <a class="hero-phone" href="tel:+541148168880" aria-label="Llamar al Estudio Salvi">+54 11 4816 8880</a>
-                <a class="hero-mail" href="mailto:contacto@estudiosalvi.com.ar">contacto@estudiosalvi.com.ar</a>
-                <a class="hero-contact-link" href="./contacto.html">Información de contacto completa</a>
+              <!-- Compactamos el mensaje de urgencia para lectura rápida en desktop -->
+              <h2>Asistencia penal urgente 24/7</h2>
+              <p class="hero-panel-text">Atención inmediata ante allanamientos, detenciones y cautelares.</p>
+              <div class="hero-panel-actions">
+                <a class="btn-refined primary" data-cta="urgent_call" href="tel:+541148168880">Llamar ahora</a>
+                <a class="btn-refined ghost" href="mailto:contacto@estudiosalvi.com.ar">Escribir</a>
               </div>
-              <p class="hero-location"><i class="fas fa-location-dot" aria-hidden="true"></i>Arenales 1457, Recoleta, CABA</p>
+              <a class="hero-contact-link" href="./contacto.html">Información de contacto completa</a>
+                    <!-- Movimos la dirección fuera del hero para respetar la jerarquía de contacto -->
             </div>
           </aside>
+          <!-- Emergency strip móvil reemplaza la card en pantallas pequeñas -->
+          <div class="hero-emergency-strip" role="group" aria-label="Asistencia penal urgente">
+            <a class="btn-refined primary" data-cta="urgent_call" href="tel:+541148168880">Llamar ahora</a>
+            <a class="btn-refined ghost" href="./contacto.html">Escribir</a>
+          </div>
         </div>
-        <div class="scroll-indicator" onclick="document.getElementById('quienes-somos').scrollIntoView({behavior: 'smooth'})">
-          ↓
-        </div>
+        <button
+          class="scroll-indicator"
+          type="button"
+          aria-label="Ir a la sección Quiénes somos"
+          onclick="const target=document.getElementById('quienes-somos'); if(!target){return;} const prefersReducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches; target.scrollIntoView({behavior: prefersReducedMotion ? 'auto' : 'smooth'});">
+          <span aria-hidden="true">↓</span>
+        </button>
       </section>
+
 
       <!-- Quiénes somos -->
       <section id="quienes-somos" class="section section-with-bg" aria-labelledby="quienes-somos-title">
@@ -239,66 +242,6 @@
         </div>
       </section>
 
-      <!-- Diferenciales -->
-      <section id="diferenciales" class="section" aria-labelledby="diferenciales-title">
-        <div class="container">
-          <div class="diferenciales-header">
-            <span class="pretitle">Nuestro enfoque</span>
-            <h2 id="diferenciales-title">Por qué confían en nosotros</h2>
-            <p class="lead">Combinamos experiencia judicial, actualización académica permanente y una red de especialistas que nos permite responder con precisión en situaciones críticas.</p>
-          </div>
-          <div class="diferenciales-grid">
-            <article class="value-card">
-              <i class="fas fa-scale-balanced" aria-hidden="true"></i>
-              <h3>Visión judicial</h3>
-              <p>Conocemos el funcionamiento interno de los tribunales federales y nacionales, anticipando escenarios procesales y definiendo estrategias sólidas.</p>
-            </article>
-            <article class="value-card">
-              <i class="fas fa-handshake-angle" aria-hidden="true"></i>
-              <h3>Relación cercana</h3>
-              <p>Asignamos un socio referente por caso y mantenemos comunicación directa y clara en cada instancia del proceso.</p>
-            </article>
-            <article class="value-card">
-              <i class="fas fa-lightbulb" aria-hidden="true"></i>
-              <h3>Estrategia preventiva</h3>
-              <p>Diseñamos diagnósticos de riesgo penal, planes de cumplimiento y capacitaciones ejecutivas adaptadas a cada industria.</p>
-            </article>
-            <article class="value-card">
-              <i class="fas fa-shield-halved" aria-hidden="true"></i>
-              <h3>Confidencialidad absoluta</h3>
-              <p>Protocolos estrictos de resguardo de información y coordinación con equipos legales internos y externos.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Metodología -->
-      <section id="metodo" class="section alt" aria-labelledby="metodo-title">
-        <div class="container">
-          <div class="metodo-header">
-            <span class="pretitle">Metodología</span>
-            <h2 id="metodo-title">Cómo abordamos cada caso</h2>
-          </div>
-          <div class="metodo-grid">
-            <article class="step-card">
-              <span class="step-number">01</span>
-              <h3>Diagnóstico inmediato</h3>
-              <p>Revisión de la situación procesal, medidas urgentes y análisis de documentación inicial con entrevistas a los involucrados.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-number">02</span>
-              <h3>Estrategia integral</h3>
-              <p>Diseñamos la hoja de ruta penal, preventiva y comunicacional coordinando con asesores externos cuando es necesario.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-number">03</span>
-              <h3>Ejecución y seguimiento</h3>
-              <p>Presentaciones, audiencias y negociaciones con reportes periódicos y evaluación constante de alternativas procesales.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <!-- Equipo -->
       <section id="equipo" class="section section-with-bg" aria-labelledby="equipo-title">
         <div class="section-bg" style="background-image: url('img/6 Campo T web.jpg')"></div>
@@ -357,12 +300,7 @@
             <div class="contact-intro">
               <span class="pretitle">Contacto</span>
               <h2 id="contacto-title">Coordinemos una consulta</h2>
-              <p class="lead">Respondemos consultas en un máximo de 48 horas hábiles. Para situaciones urgentes, comunicate por teléfono o WhatsApp y priorizaremos la atención.</p>
-              <ul class="list-check">
-                <li>Reuniones presenciales y virtuales</li>
-                <li>Confidencialidad garantizada</li>
-                <li>Evaluación inicial sin compromiso</li>
-              </ul>
+              <p class="lead">Respondemos consultas en un máximo de 48 horas hábiles. Para situaciones urgentes, comunicate por teléfono y priorizaremos la atención.</p>
             </div>
             <div class="contact-card">
               <div class="contact-details">
@@ -380,7 +318,6 @@
                 </div>
               </div>
               <a class="btn-refined primary full" href="mailto:info@estudiosalvi.com.ar?subject=Consulta%20Estudio%20Salvi">Enviar consulta</a>
-              <p class="contact-note">También podés escribirnos por <a href="https://wa.me/5491148168880" target="_blank" rel="noopener">WhatsApp</a> para coordinación inmediata.</p>
             </div>
           </div>
         </div>
