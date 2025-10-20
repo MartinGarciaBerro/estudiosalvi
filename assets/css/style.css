@@ -1,4 +1,4 @@
-﻿/*
+/*
   Estudio Salvi UI Kit
   --------------------
   - Tokens de dise├▒o
@@ -746,10 +746,6 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 .person-card .excerpt { color: var(--color-muted); }
 .person-card .detail-link { font-weight: 600; color: var(--color-accent-dark); }
 
-.mission-grid { display: grid; gap: var(--gap-5); }
-@media (min-width: 900px) { .mission-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.mission-card { background: #fff; border-radius: var(--radius); padding: var(--gap-4); box-shadow: var(--shadow); display: grid; gap: var(--gap-3); }
-
 .practice-section { padding-block: clamp(56px, 10vw, 92px); } /* // tweak: m├írgenes verticales */
 .practice-inner { display: grid; gap: clamp(32px, 6vw, 48px); } /* // tweak: separaci├│n general */
 .practice-header { max-width: clamp(320px, 64ch, 720px); display: grid; gap: var(--gap-3); }
@@ -973,3 +969,46 @@ main { min-height: calc(100vh - 220px); display: block; }
 
 
 
+.section-header.text-center { text-align: center; margin-left: auto; margin-right: auto; }
+.section-header.text-center > * { margin-left: auto; margin-right: auto; }
+
+.history-wrap { display: grid; gap: clamp(32px, 6vw, 72px); align-items: center; }
+@media (min-width: 1024px) { .history-wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); } }
+.history-intro { display: grid; gap: var(--gap-3); max-width: 72ch; }
+.history-intro .lead { margin-bottom: var(--gap-2); }
+.history-details { display: grid; gap: clamp(24px, 4vw, 40px); }
+.history-note { border-left: 3px solid var(--color-accent); padding-left: var(--gap-3); display: grid; gap: var(--gap-2); }
+.history-note h3 { margin: 0; font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
+.history-metrics { list-style: none; margin: 0; padding: var(--gap-3); border: 1px solid rgba(17, 17, 17, 0.08); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); display: grid; gap: var(--gap-3); }
+.history-metrics li { display: grid; gap: 6px; }
+.history-metrics strong { font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--color-accent-dark); letter-spacing: 0.05em; }
+.history-metrics span { color: var(--color-muted); line-height: 1.5; }
+.history-media { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.history-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.identidad-wrap { display: grid; gap: clamp(36px, 6vw, 56px); align-items: start; }
+.identidad-header { display: grid; gap: var(--gap-3); text-align: center; max-width: 68ch; margin: 0 auto; }
+.identidad-grid { display: grid; gap: var(--gap-4); }
+@media (min-width: 900px) { .identidad-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.feature-card { background: #fff; border-radius: var(--radius); padding: var(--gap-4); box-shadow: var(--shadow); border: 1px solid rgba(17, 17, 17, 0.08); display: grid; gap: var(--gap-2); align-content: start; }
+.feature-card h3 { margin: 0; font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
+
+.mission-wrap { display: grid; gap: clamp(32px, 7vw, 60px); }
+.mission-intro { display: grid; gap: var(--gap-3); max-width: 68ch; }
+.mission-panels { display: grid; gap: var(--gap-4); }
+@media (min-width: 980px) { .mission-panels { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.mission-panel { background: #fff; border-radius: var(--radius); padding: var(--gap-4); box-shadow: var(--shadow); border: 1px solid rgba(17, 17, 17, 0.08); display: grid; gap: var(--gap-3); }
+.mission-panel h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.7rem); }
+.mission-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--gap-2); }
+.mission-list li { position: relative; padding-left: calc(var(--gap-3) + 12px); color: var(--color-muted); line-height: 1.6; }
+.mission-list li::before { content: "\2713"; position: absolute; left: 0; top: 0.15em; color: var(--color-accent-dark); font-weight: 700; }
+
+.team-simple { display: grid; gap: var(--gap-3); text-align: center; max-width: 520px; margin: 0 auto; }
+.team-simple .pretitle { margin-bottom: 0; }
+.team-simple p { margin: 0; color: var(--color-muted); }
+.team-simple .btn { justify-self: center; margin-top: var(--gap-2); }
+
+@media (max-width: 640px) {
+  .history-metrics { padding: var(--gap-3); }
+  .mission-panels { grid-template-columns: 1fr; }
+}
