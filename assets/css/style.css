@@ -534,7 +534,13 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   .team-showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 900px) {
-  .team-showcase { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .team-showcase {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    justify-items: stretch;
+  }
+  .team-showcase > .team-card { grid-column: span 2; }
+  .team-showcase > .team-card:nth-child(4) { grid-column: 2 / span 2; }
+  .team-showcase > .team-card:nth-child(5) { grid-column: 4 / span 2; }
 }
 .team-card {
   display: grid;
@@ -683,7 +689,15 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 }
 .team-grid { display: grid; gap: var(--gap-5); }
 @media (min-width: 600px) { .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1024px) { .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    justify-items: stretch;
+  }
+  .team-grid > .card-persona { grid-column: span 2; }
+  .team-grid > .card-persona:nth-child(4) { grid-column: 2 / span 2; }
+  .team-grid > .card-persona:nth-child(5) { grid-column: 4 / span 2; }
+}
 
 .card-persona {
   background: #fff;
