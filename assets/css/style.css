@@ -109,8 +109,7 @@ header.site-header {
   top: 0;
   inset-inline: 0;
   z-index: 1200;
-  backdrop-filter: saturate(180%) blur(14px);
-  background: rgba(255, 255, 255, 0.92);
+  background: #ffffff;
   border-bottom: 1px solid rgba(17, 17, 17, 0.08);
   color: #111111;
 }
@@ -152,7 +151,7 @@ header.site-header {
 .site-nav {
   position: fixed;
   inset: var(--header-height) var(--gap-4) auto var(--gap-4);
-  background: rgba(255, 255, 255, 0.9);
+  background: #ffffff;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -702,6 +701,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 .card-persona .rol { font-weight: 600; color: var(--color-accent-dark); margin: 0; }
 .card-persona .bio { color: var(--color-muted); }
 .card-persona .same-as { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.card-persona .same-as i { font-size: 1.5rem; }
 
 .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: rgba(68,126,109,0.12); color: var(--color-accent-dark); font-weight: 600; font-size: 0.95rem; }
 
@@ -879,7 +879,7 @@ footer.site-footer {
 
 @media (max-width: 520px) {
   h1 { font-size: clamp(2.1rem, 8vw, 2.6rem); }
-  header.site-header { background: rgba(255,255,255,0.98); }
+  header.site-header { background: #ffffff; }
 }
 
 .sticky-cta { position: fixed; inset: auto var(--gap-3) var(--gap-3) auto; display: none; }
