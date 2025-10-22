@@ -17,7 +17,7 @@ Sitio estático en HTML5, CSS3 y JavaScript vanilla con foco en accesibilidad AA
 ## Estilos y diseño
 
 - Tokens en `:root` para colores, espaciados y sombras.
-- Tipografías Playfair Display (títulos) e Inter (texto) con `font-display: swap`.
+- Tipografías Raleway (títulos y destacados) y Avenir LT W01 35 Light (cuerpo) servidas vía CDN con `display=swap`.
 - Utilidades `.container`, `.stack`, `.grid`, `.card-persona`, etc. para layout consistente.
 - Header sticky con foco visible, skip-link y botones fluidos.
 
