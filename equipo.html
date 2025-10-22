@@ -71,60 +71,231 @@
             <h2 id="equipo-title">Nuestro Equipo</h2>
             <p class="lead">Desde hace m&aacute;s de veinticinco a&ntilde;os formamos parte de un equipo de abogados con una s&oacute;lida formaci&oacute;n acad&eacute;mica y una amplia experiencia que nos permite el ejercicio vers&aacute;til de la profesi&oacute;n en funci&oacute;n de los diferentes requerimientos y necesidades de nuestros clientes, l&iacute;deres en el desarrollo econ&oacute;mico, industrial y productivo de la Argentina.</p>
           </div>
-          <div class="team-grid">
-            <article class="card-persona" id="oscar-salvi" tabindex="0" aria-label="Perfil de Oscar Mario Salvi" data-reveal>
-              <picture class="foto" aria-hidden="true">
-                <source srcset="img/OscarSalvi.avif" type="image/avif">
-                <img src="img/OscarSalvi.avif" alt="Retrato de Oscar Mario Salvi" loading="lazy" width="480" height="560">
-              </picture>
-              <h3>Oscar Mario Salvi</h3>
-              <p class="rol">Fundador del Estudio Salvi</p>
-              <p class="bio">Abogado por la Universidad Cat&oacute;lica Argentina (1972). Fundador del Estudio Salvi, con amplia trayectoria en derecho penal y procesal penal. Se desempe&ntilde;&oacute; como Procurador Fiscal Federal, Fiscal Nacional Electoral y Juez Federal. Profesor en UBA y UCA. Autor de El Estado de Sitio y la Libertad de Imprenta, La F&oacute;rmula Negativa del Concurso Ideal y m&aacute;s de 200 publicaciones en El Derecho.</p>
-              <a class="same-as" href="https://www.linkedin.com/in/oscar-salvi-4147a920b/" aria-label="LinkedIn de Oscar Mario Salvi">
-                <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
-              </a>
+        </div>
+      </section>
+
+      <style>
+        .team-wrapper {
+          width: min(1280px, 92vw);
+          margin-inline: auto;
+          padding: clamp(32px, 7vw, 88px) clamp(24px, 6vw, 72px);
+          display: grid;
+          gap: clamp(40px, 6vw, 72px);
+        }
+
+        .team-group {
+          display: grid;
+          gap: clamp(24px, 4vw, 48px);
+        }
+
+        .team-group-title {
+          font-size: clamp(1.8rem, 3vw, 2.2rem);
+          font-weight: 600;
+          letter-spacing: -0.01em;
+        }
+
+        .profile-card {
+          background: var(--color-bg);
+          border-radius: var(--radius-sm);
+          border: 1px solid rgba(17, 17, 17, 0.08);
+          box-shadow: 0 24px 44px -32px rgba(17, 17, 17, 0.22);
+          padding: clamp(24px, 4vw, 48px);
+          display: grid;
+          grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.1fr);
+          gap: clamp(24px, 5vw, 64px);
+          align-items: stretch;
+          min-height: clamp(520px, 72vh, 760px);
+          max-height: min(80vh, 820px);
+          overflow: hidden;
+        }
+
+        .profile-photo {
+          position: relative;
+          aspect-ratio: 3 / 4;
+          border-radius: 8px;
+          overflow: hidden;
+          background: var(--color-surface);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--color-muted);
+          font-size: clamp(2.2rem, 5vw, 3rem);
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        .profile-photo picture {
+          width: 100%;
+          height: 100%;
+        }
+
+        .profile-photo img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .profile-content {
+          display: flex;
+          flex-direction: column;
+          gap: var(--gap-4);
+          max-width: 65ch;
+          max-height: 100%;
+          overflow: auto;
+          padding-right: clamp(4px, 1vw, 16px);
+        }
+
+        .profile-name {
+          margin-bottom: var(--gap-2);
+        }
+
+        .profile-role {
+          font-weight: 500;
+          color: var(--color-muted);
+        }
+
+        .profile-links {
+          display: inline-flex;
+          gap: var(--gap-3);
+          margin-top: auto;
+        }
+
+        .profile-links a {
+          display: inline-flex;
+          width: 44px;
+          height: 44px;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          border: 1px solid rgba(17, 17, 17, 0.12);
+          color: var(--color-accent);
+        }
+
+        .profile-links a:hover,
+        .profile-links a:focus-visible {
+          border-color: rgba(68, 126, 109, 0.3);
+          background-color: rgba(68, 126, 109, 0.08);
+        }
+
+        @media (max-width: 1024px) {
+          .profile-card {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            height: auto;
+            max-height: none;
+          }
+
+          .profile-content {
+            max-width: min(65ch, 100%);
+            margin-inline: auto;
+            padding-right: 0;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .team-wrapper {
+            padding: clamp(32px, 10vw, 56px) clamp(20px, 8vw, 40px);
+          }
+
+          .profile-card {
+            padding: clamp(24px, 8vw, 40px);
+            gap: clamp(20px, 6vw, 32px);
+          }
+        }
+      </style>
+
+      <section class="team-directory" aria-label="Directorio del Estudio Salvi">
+        <div class="team-wrapper">
+          <div class="team-group" data-reveal>
+            <h2 class="team-group-title" id="socios-title">Socios</h2>
+            <article class="profile-card" id="oscar-salvi" aria-labelledby="oscar-salvi-nombre">
+              <div class="profile-photo">
+                <picture>
+                  <source srcset="img/OscarSalvi.avif" type="image/avif">
+                  <img src="img/OscarSalvi.avif" alt="Retrato de Oscar Mario Salvi" loading="lazy" width="480" height="640">
+                </picture>
+              </div>
+              <div class="profile-content">
+                <h2 class="profile-name" id="oscar-salvi-nombre">Oscar Mario Salvi</h2>
+                <p class="profile-role">Fundador del Estudio Salvi</p>
+                <p>Abogado por la Universidad Cat&oacute;lica Argentina (1972). Fundador del Estudio Salvi, con amplia trayectoria en derecho penal y procesal penal. Se desempe&ntilde;&oacute; como Procurador Fiscal Federal, Fiscal Nacional Electoral y Juez Federal. Profesor en UBA y UCA. Autor de El Estado de Sitio y la Libertad de Imprenta, La F&oacute;rmula Negativa del Concurso Ideal y m&aacute;s de 200 publicaciones en El Derecho.</p>
+                <div class="profile-links">
+                  <a href="https://www.linkedin.com/in/oscar-salvi-4147a920b/" aria-label="LinkedIn de Oscar Mario Salvi">
+                    <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+                  </a>
+                </div>
+              </div>
             </article>
-            <article class="card-persona" id="maria-fiorito" tabindex="0" aria-label="Perfil de Mar&iacute;a Fiorito" data-reveal>
-              <picture class="foto" aria-hidden="true">
-                <source srcset="img/MariaFiorito.avif" type="image/avif">
-                <img src="img/MariaFiorito.avif" alt="Retrato de Mar&iacute;a Fiorito" loading="lazy" width="480" height="560">
-              </picture>
-              <h3>Mar&iacute;a Fiorito</h3>
-              <p class="rol">Especialista en Derecho Penal</p>
-              <p class="bio">Abogada por la Universidad de Buenos Aires, con Especializaci&oacute;n en Derecho Penal. Inici&oacute; su carrera en el fuero Criminal y Correccional Federal. Integra el Estudio Salvi, donde brinda asesoramiento penal preventivo y litigioso. Formaci&oacute;n avanzada en crimen organizado, corrupci&oacute;n, lavado de activos y compliance. Docente en capacitaciones a directores sobre responsabilidades penales empresariales.</p>
-              <a class="same-as" href="https://www.linkedin.com/in/maria-fiorito-16334621/" aria-label="LinkedIn de Mar&iacute;a Fiorito">
-                <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
-              </a>
+
+            <article class="profile-card" id="maria-fiorito" aria-labelledby="maria-fiorito-nombre">
+              <div class="profile-photo">
+                <picture>
+                  <source srcset="img/MariaFiorito.avif" type="image/avif">
+                  <img src="img/MariaFiorito.avif" alt="Retrato de Mar&iacute;a Fiorito" loading="lazy" width="480" height="640">
+                </picture>
+              </div>
+              <div class="profile-content">
+                <h2 class="profile-name" id="maria-fiorito-nombre">Mar&iacute;a Fiorito</h2>
+                <p class="profile-role">Socia - Especialista en Derecho Penal</p>
+                <p>Abogada por la Universidad de Buenos Aires, con Especializaci&oacute;n en Derecho Penal. Inici&oacute; su carrera en el fuero Criminal y Correccional Federal. Integra el Estudio Salvi, donde brinda asesoramiento penal preventivo y litigioso. Formaci&oacute;n avanzada en crimen organizado, corrupci&oacute;n, lavado de activos y compliance. Docente en capacitaciones a directores sobre responsabilidades penales empresariales.</p>
+                <div class="profile-links">
+                  <a href="https://www.linkedin.com/in/maria-fiorito-16334621/" aria-label="LinkedIn de Mar&iacute;a Fiorito">
+                    <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+                  </a>
+                </div>
+              </div>
             </article>
-            <article class="card-persona" id="matias-moran" tabindex="0" aria-label="Perfil de Mat&iacute;as Mor&aacute;n" data-reveal>
-              <picture class="foto" aria-hidden="true">
-                <source srcset="img/MatiasMoran.avif" type="image/avif">
-                <img src="img/MatiasMoran.avif" alt="Retrato de Mat&iacute;as Mor&aacute;n" loading="lazy" width="480" height="560">
-              </picture>
-              <h3>Mat&iacute;as Mor&aacute;n</h3>
-              <p class="rol">Especialista en Derecho Penal</p>
-              <p class="bio">Abogado por la Universidad de Buenos Aires (2002) y especialista en Derecho Penal por la Universidad Austral. Desarroll&oacute; una destacada trayectoria en el Poder Judicial, donde fue Secretario de la Justicia Nacional en lo Criminal. Desde 2008 integra el Estudio Salvi, donde asesora en aspectos procesales y preventivos del derecho penal.</p>
-              <a class="same-as" href="https://www.linkedin.com/in/matias-moran" aria-label="LinkedIn de Mat&iacute;as Mor&aacute;n">
-                <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
-              </a>
+
+            <article class="profile-card" id="matias-moran" aria-labelledby="matias-moran-nombre">
+              <div class="profile-photo">
+                <picture>
+                  <source srcset="img/MatiasMoran.avif" type="image/avif">
+                  <img src="img/MatiasMoran.avif" alt="Retrato de Mat&iacute;as Mor&aacute;n" loading="lazy" width="480" height="640">
+                </picture>
+              </div>
+              <div class="profile-content">
+                <h2 class="profile-name" id="matias-moran-nombre">Mat&iacute;as Mor&aacute;n</h2>
+                <p class="profile-role">Socio - Especialista en Derecho Penal</p>
+                <p>Abogado por la Universidad de Buenos Aires (2002) y especialista en Derecho Penal por la Universidad Austral. Desarroll&oacute; una destacada trayectoria en el Poder Judicial, donde fue Secretario de la Justicia Nacional en lo Criminal. Desde 2008 integra el Estudio Salvi, donde asesora en aspectos procesales y preventivos del derecho penal.</p>
+                <div class="profile-links">
+                  <a href="https://www.linkedin.com/in/matias-moran" aria-label="LinkedIn de Mat&iacute;as Mor&aacute;n">
+                    <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+                  </a>
+                </div>
+              </div>
             </article>
-            <article class="card-persona" id="santiago-vaccaro" tabindex="0" aria-label="Perfil de Santiago Vaccaro" data-reveal>
-              <picture class="foto" aria-hidden="true">
-                <source srcset="img/SantiagoVaccaro.avif" type="image/avif">
-                <img src="img/SantiagoVaccaro.avif" alt="Retrato de Santiago Vaccaro" loading="lazy" width="480" height="560">
-              </picture>
-              <h3>Santiago Vaccaro</h3>
-              <p class="rol">Abogado Penalista</p>
-              <p class="bio">Abogado por la Pontificia Universidad Cat&oacute;lica Argentina (2013) y especialista en Derecho Penal. Inici&oacute; su pr&aacute;ctica profesional en el Estudio Salvi en 2010, donde asesora en cuestiones penales procesales y preventivas. Realiz&oacute; cursos en derecho deportivo, delitos inform&aacute;ticos y r&eacute;gimen penal tributario.</p>
-              <a class="same-as" href="https://www.linkedin.com/in/santiago-vaccaro-6978b657/" aria-label="LinkedIn de Santiago Vaccaro">
-                <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
-              </a>
+          </div>
+
+          <div class="team-group" data-reveal>
+            <h2 class="team-group-title" id="abogados-title">Abogados</h2>
+            <article class="profile-card" id="santiago-vaccaro" aria-labelledby="santiago-vaccaro-nombre">
+              <div class="profile-photo">
+                <picture>
+                  <source srcset="img/SantiagoVaccaro.avif" type="image/avif">
+                  <img src="img/SantiagoVaccaro.avif" alt="Retrato de Santiago Vaccaro" loading="lazy" width="480" height="640">
+                </picture>
+              </div>
+              <div class="profile-content">
+                <h2 class="profile-name" id="santiago-vaccaro-nombre">Santiago Vaccaro</h2>
+                <p class="profile-role">Abogado Penalista</p>
+                <p>Abogado por la Pontificia Universidad Cat&oacute;lica Argentina (2013) y especialista en Derecho Penal. Inici&oacute; su pr&aacute;ctica profesional en el Estudio Salvi en 2010, donde asesora en cuestiones penales procesales y preventivas. Realiz&oacute; cursos en derecho deportivo, delitos inform&aacute;ticos y r&eacute;gimen penal tributario.</p>
+                <div class="profile-links">
+                  <a href="https://www.linkedin.com/in/santiago-vaccaro-6978b657/" aria-label="LinkedIn de Santiago Vaccaro">
+                    <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+                  </a>
+                </div>
+              </div>
             </article>
-            <article class="card-persona" id="joaquin-garcia-berro" tabindex="0" aria-label="Perfil de Joaqu&iacute;n Garc&iacute;a Berro" data-reveal>
-              <div class="foto is-placeholder" role="img" aria-label="Retrato de Joaqu&iacute;n Garc&iacute;a Berro (placeholder)">JGB</div>
-              <h3>Joaqu&iacute;n Garc&iacute;a Berro</h3>
-              <p class="rol">Abogado Penalista</p>
-              <p class="bio">Perfil pr&oacute;ximamente disponible.</p>
+
+            <article class="profile-card" id="joaquin-garcia-berro" aria-labelledby="joaquin-garcia-berro-nombre">
+              <div class="profile-photo" role="img" aria-label="Retrato de Joaqu&iacute;n Garc&iacute;a Berro (placeholder)">
+                <span>JGB</span>
+              </div>
+              <div class="profile-content">
+                <h2 class="profile-name" id="joaquin-garcia-berro-nombre">Joaqu&iacute;n Garc&iacute;a Berro</h2>
+                <p class="profile-role">Abogado Penalista</p>
+                <p>Perfil pr&oacute;ximamente disponible.</p>
+              </div>
             </article>
           </div>
         </div>
