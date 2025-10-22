@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupMobileNav();
   setupScrollReveal();
   setupForms();
+  setupBackToTop();
   updateYear();
 });
 
@@ -91,6 +92,31 @@ function setupForms() {
       }
     });
   });
+}
+
+function setupBackToTop() {
+  const button = document.querySelector('.back-to-top-btn');
+  if (!button) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const toggleVisibility = () => {
+    if (window.scrollY > 200) {
+      button.classList.add('is-visible');
+    } else {
+      button.classList.remove('is-visible');
+    }
+  };
+
+  button.addEventListener('click', () => {
+    if (prefersReducedMotion.matches) {
+      window.scrollTo(0, 0);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
 }
 
 function updateYear() {

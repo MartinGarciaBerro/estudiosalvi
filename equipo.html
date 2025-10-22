@@ -30,7 +30,7 @@
     <!-- Favicon -->
     <link rel="icon" href="img/logo.avif" type="image/avif">
   </head>
-  <body>
+  <body id="top">
     <a href="#main" class="skip-link">Saltar al contenido</a>
 
     <header class="site-header" role="banner">
@@ -48,6 +48,7 @@
         <nav id="site-nav" class="site-nav" role="navigation" aria-label="Navegaci&oacute;n principal">
           <ul class="nav-list">
             <li><a class="nav-link" href="./index.html">Inicio</a></li>
+            <li><a class="nav-link" href="./area.html">Áreas</a></li>
             <li><a class="nav-link" href="./quienes-somos.html">Qui&eacute;nes somos</a></li>
             <li><a class="nav-link" href="./equipo.html" aria-current="page">Equipo</a></li>
             <li><a class="nav-link" href="./clientes.html">Clientes</a></li>
@@ -76,7 +77,7 @@
 
       <style>
         .team-wrapper {
-          width: min(1280px, 92vw);
+          width: min(1600px, 96vw);
           margin-inline: auto;
           padding: clamp(32px, 7vw, 88px) clamp(24px, 6vw, 72px);
           display: grid;
@@ -99,29 +100,27 @@
           border-radius: var(--radius-sm);
           border: 1px solid rgba(17, 17, 17, 0.08);
           box-shadow: 0 24px 44px -32px rgba(17, 17, 17, 0.22);
-          padding: clamp(24px, 4vw, 48px);
           display: grid;
-          grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.1fr);
-          gap: clamp(24px, 5vw, 64px);
-          align-items: stretch;
-          min-height: clamp(520px, 72vh, 760px);
-          max-height: min(80vh, 820px);
+          grid-template-columns: clamp(460px, 52%, 720px) minmax(420px, 1fr);
+          gap: 0;
+          min-height: 0;
           overflow: hidden;
+          scroll-margin-top: calc(var(--header-height) + 32px);
         }
 
         .profile-photo {
           position: relative;
-          aspect-ratio: 3 / 4;
-          border-radius: 8px;
-          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          min-height: 100%;
+          display: grid;
+          place-items: center;
           background: var(--color-surface);
-          display: flex;
-          align-items: center;
-          justify-content: center;
           color: var(--color-muted);
           font-size: clamp(2.2rem, 5vw, 3rem);
           font-weight: 600;
           text-transform: uppercase;
+          overflow: hidden;
         }
 
         .profile-photo picture {
@@ -140,9 +139,12 @@
           flex-direction: column;
           gap: var(--gap-4);
           max-width: 65ch;
-          max-height: 100%;
-          overflow: auto;
-          padding-right: clamp(4px, 1vw, 16px);
+          padding: clamp(32px, 4vw, 64px);
+          overflow: visible;
+        }
+
+        .profile-content p {
+          text-align: justify;
         }
 
         .profile-name {
@@ -181,14 +183,18 @@
           .profile-card {
             grid-template-columns: 1fr;
             grid-template-rows: auto 1fr;
-            height: auto;
-            max-height: none;
+            gap: clamp(20px, 6vw, 32px);
           }
 
           .profile-content {
             max-width: min(65ch, 100%);
-            margin-inline: auto;
-            padding-right: 0;
+            padding: clamp(28px, 8vw, 44px);
+          }
+
+          .profile-photo {
+            min-height: 0;
+            height: auto;
+            aspect-ratio: 3 / 4;
           }
         }
 
@@ -207,7 +213,6 @@
       <section class="team-directory" aria-label="Directorio del Estudio Salvi">
         <div class="team-wrapper">
           <div class="team-group" data-reveal>
-            <h2 class="team-group-title" id="socios-title">Socios</h2>
             <article class="profile-card" id="oscar-salvi" aria-labelledby="oscar-salvi-nombre">
               <div class="profile-photo">
                 <picture>
@@ -218,7 +223,13 @@
               <div class="profile-content">
                 <h2 class="profile-name" id="oscar-salvi-nombre">Oscar Mario Salvi</h2>
                 <p class="profile-role">Fundador del Estudio Salvi</p>
-                <p>Abogado por la Universidad Cat&oacute;lica Argentina (1972). Fundador del Estudio Salvi, con amplia trayectoria en derecho penal y procesal penal. Se desempe&ntilde;&oacute; como Procurador Fiscal Federal, Fiscal Nacional Electoral y Juez Federal. Profesor en UBA y UCA. Autor de El Estado de Sitio y la Libertad de Imprenta, La F&oacute;rmula Negativa del Concurso Ideal y m&aacute;s de 200 publicaciones en El Derecho.</p>
+                <p>Es abogado por la Universidad Católica Argentina (1972). Desempeñó diferentes cargos en el Poder Judicial, entre los que se destacan el de  Procurador Fiscal Federal; Fiscal Nacional Electoral; y, finalmente, Juez Nacional de Primera Instancia en lo Criminal y Correccional Federal. 
+                ​<br><br>
+                En 1984 fundó el Estudio Salvi, con el objetivo de asesorar a empresas, organismos y personas humanas en cuestiones de índole penal y procesal penal, acompañarlos en el desarrollo de sus negocios, enfocado en la prevención de los conflictos. 
+                <br><br>
+                Fue profesor en diversas casas de estudios, entre las que se encuentran la Facultad de Derecho y Ciencias Sociales de la Universidad de Buenos Aires (Derecho Penal I y II), la Facultad de Derecho y Ciencias Políticas de la Universidad Católica Argentina, el Instituto de  Derecho Penal y Licenciatura en Criminología, la Escuela de Abogados del Estado (Profesor Titular en Deontología Pericial de la Licenciatura en Criminalística y Profesor Titular de Delitos contra la Administración Pública). 
+                ​<br><br>
+                Es autor de "El Estado de Sitio y la Libertad de Imprenta", "La Fórmula Negativa del Concurso Ideal" y de más de 200 colaboraciones para la                   Revista "El Derecho" en Síntesis de Fallos y comentarios. </p>
                 <div class="profile-links">
                   <a href="https://www.linkedin.com/in/oscar-salvi-4147a920b/" aria-label="LinkedIn de Oscar Mario Salvi">
                     <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
@@ -237,7 +248,13 @@
               <div class="profile-content">
                 <h2 class="profile-name" id="maria-fiorito-nombre">Mar&iacute;a Fiorito</h2>
                 <p class="profile-role">Socia - Especialista en Derecho Penal</p>
-                <p>Abogada por la Universidad de Buenos Aires, con Especializaci&oacute;n en Derecho Penal. Inici&oacute; su carrera en el fuero Criminal y Correccional Federal. Integra el Estudio Salvi, donde brinda asesoramiento penal preventivo y litigioso. Formaci&oacute;n avanzada en crimen organizado, corrupci&oacute;n, lavado de activos y compliance. Docente en capacitaciones a directores sobre responsabilidades penales empresariales.</p>
+                <p>Abogada por la Facultad de Derecho y Ciencias Sociales de la Universidad de Buenos Aires (2001), donde completó la Especialización en Derecho Penal.             
+                ​<br><br>
+                Inició su práctica profesional a temprana edad en el fuero Nacional en lo Criminal y Correccional Federal, donde ocupó durante seis años                diversos cargos. Su experiencia en el ámbito privado se inició en el Estudio Salvi y se destaca por la asistencia permanente a sus clientes,                tanto en la etapa preventiva como litigiosa.
+                ​<br><br>
+                Asimismo, dicta capacitaciones periódicas a directores de empresas en temas relacionados con las responsabilidades penales que les competen                 por sus cargos ejecutivos.
+                <br><br>
+                Realizó diversos cursos de actualización profesional, entre los que se encuentran el Curso de Especialización en Derecho Penal en la Universidad de Salamanca, España; el Curso de Posgrado de Crimen organizado, corrupción y terrorismo en la misma casa de estudios, el Programa Ejecutivo de Lavado de Activos y Financiamiento del Terrorismo, en la Universidad Torcuato Di Tella, Diplomatura de Compliance en la Universidad Austral y Diplomatura en Derecho 4.0 también en la Universidad Austral.</p>
                 <div class="profile-links">
                   <a href="https://www.linkedin.com/in/maria-fiorito-16334621/" aria-label="LinkedIn de Mar&iacute;a Fiorito">
                     <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
@@ -256,7 +273,11 @@
               <div class="profile-content">
                 <h2 class="profile-name" id="matias-moran-nombre">Mat&iacute;as Mor&aacute;n</h2>
                 <p class="profile-role">Socio - Especialista en Derecho Penal</p>
-                <p>Abogado por la Universidad de Buenos Aires (2002) y especialista en Derecho Penal por la Universidad Austral. Desarroll&oacute; una destacada trayectoria en el Poder Judicial, donde fue Secretario de la Justicia Nacional en lo Criminal. Desde 2008 integra el Estudio Salvi, donde asesora en aspectos procesales y preventivos del derecho penal.</p>
+                <p>Abogado por la Universidad de Buenos Aires (2002), en 2007 cursó la especialización en Derecho Penal en la Universidad Austral. 
+                <br><br>
+                Durante más de diez años, se desempeñó en diversos ámbitos del Poder Judicial, hasta ser designado en el cargo de Secretario de la Justicia Nacional en lo Criminal de Instrucción de la Capital Federal. Durante esta gestión, el Juzgado Nacional en lo Criminal de Instrucción nro. 36 fue ternado por el Foro de Estudios sobre la Administración de Justicia (FORES) para recibir el “Premio a la Excelencia Judicial 2007”. 
+                <br><br>
+                En abril de 2008 se incorporó al Estudio Salvi y desde entonces asesora a los clientes en aspectos procesales y preventivos del Derecho Penal. </p>
                 <div class="profile-links">
                   <a href="https://www.linkedin.com/in/matias-moran" aria-label="LinkedIn de Mat&iacute;as Mor&aacute;n">
                     <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
@@ -267,7 +288,6 @@
           </div>
 
           <div class="team-group" data-reveal>
-            <h2 class="team-group-title" id="abogados-title">Abogados</h2>
             <article class="profile-card" id="santiago-vaccaro" aria-labelledby="santiago-vaccaro-nombre">
               <div class="profile-photo">
                 <picture>
@@ -278,9 +298,36 @@
               <div class="profile-content">
                 <h2 class="profile-name" id="santiago-vaccaro-nombre">Santiago Vaccaro</h2>
                 <p class="profile-role">Abogado Penalista</p>
-                <p>Abogado por la Pontificia Universidad Cat&oacute;lica Argentina (2013) y especialista en Derecho Penal. Inici&oacute; su pr&aacute;ctica profesional en el Estudio Salvi en 2010, donde asesora en cuestiones penales procesales y preventivas. Realiz&oacute; cursos en derecho deportivo, delitos inform&aacute;ticos y r&eacute;gimen penal tributario.</p>
+                <p>Abogado por la Facultad de Derecho de la Pontificia Universidad Católica Argentina (2013), donde completó la carrera de Especialización en Derecho Penal (2016/2017).
+                  <br><br>
+                  Inició su práctica profesional en el año 2010 en el Estudio Salvi, donde se destaca por la asistencia permanente a sus clientes en aspectos procesales y preventivos del Derecho Penal. 
+                  <br><br>
+                  Realizó distintos cursos de actualización profesional, entre los que se encuentran: Posgrado de “Derecho y Management del Deporte, Programa UCA/FIFA – CIES; Programa de Perfeccionamiento en el Ejercicio Profesional, del centro de Graduados de la Facultad de Derecho, Módulo Régimen Infraccional y Penal Tributario; E-learning-Conocimiento sin fronteras: Curso a distancia sobre Robo de Identidad, y Delitos Informáticos a cargo del Dr. Daniel Monastersky.</p>
                 <div class="profile-links">
                   <a href="https://www.linkedin.com/in/santiago-vaccaro-6978b657/" aria-label="LinkedIn de Santiago Vaccaro">
+                    <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="profile-card" id="valeria-del-bono-lonardi" aria-labelledby="valeria-del-bono-lonardi-nombre">
+              <div class="profile-photo">
+                <picture>
+                  <source srcset="img/ValeriadelBonoLonardi.avif" type="image/avif">
+                  <img src="img/ValeriadelBonoLonardi.avif" alt="Retrato de Valeria del Bono Lonardi" loading="lazy" width="480" height="640">
+                </picture>
+              </div>
+              <div class="profile-content">
+                <h2 class="profile-name" id="valeria-del-bono-lonardi-nombre">Valeria del Bono Lonardi</h2>
+                <p class="profile-role">Especialista en litigaci&oacute;n penal</p>
+                <p>
+                  Abogada por la Universidad de Derecho de la UBA (1994), asistió también a diversos cursos de especialización profesional, entre los que se encuentran el Programa de Litigación Compleja ante la CSJN: Fundamento Centrales de la Instancia Extraordinaria en la Universidad Torcuato Di Tella; y el Programa Internacional de Actualización Penal (PIAP), la Jornada Dogmática del Delito Culposo y la Diplomatura en Compliance y Derecho Penal en la Universidad Austral.
+                  <br><br>
+                  Ingresó al Estudio Salvi en 1995 y desde entonces está abocada con exclusividad al asesoramiento y práctica del derecho penal. Su especialización profesional se basa principalmente en la dogmática de los delitos culposos, con asistencia permanente a compañías de seguros y a profesionales independientes; la elaboración de estrategias y planteos de defensas técnicas en el marco de la celebración de los juicios orales y públicos, y el asesoramiento de prevención de fraudes corporativos, particularmente a entidades bancarias y financieras.
+                </p>
+                <div class="profile-links">
+                  <a href="https://www.linkedin.com/in/valeria-del-bono-lonardi-215a609/" aria-label="LinkedIn de Valeria del Bono Lonardi">
                     <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
                   </a>
                 </div>
@@ -321,6 +368,7 @@
             <h3>Enlaces r&aacute;pidos</h3>
             <ul>
               <li><a href="./index.html">Inicio</a></li>
+              <li><a href="./area.html">&Aacute;reas</a></li>
               <li><a href="./quienes-somos.html">Qui&eacute;nes somos</a></li>
               <li><a href="./equipo.html">Equipo</a></li>
               <li><a href="./clientes.html">Clientes</a></li>
@@ -340,6 +388,10 @@
       </div>
     </footer>
 
+    <button class="back-to-top-btn" type="button" aria-label="Volver arriba">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+      <span class="visually-hidden">Volver arriba</span>
+    </button>
     <script src="assets/js/app.js" defer></script>
   </body>
 </html>
