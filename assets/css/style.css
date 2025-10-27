@@ -960,7 +960,11 @@ footer.site-footer {
 .sticky-cta { position: fixed; inset: auto var(--gap-3) var(--gap-3) auto; display: none; }
 @media (max-width: 768px) { .sticky-cta { display: block; z-index: 1000; } }
 
-main { min-height: calc(100vh - 220px); display: block; }
+main {
+  min-height: calc(100vh - 220px);
+  display: block;
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
 
 
 

@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupScrollReveal();
   setupForms();
   setupBackToTop();
+  setupAnchorOffsets();
   updateYear();
 });
 
@@ -117,6 +118,60 @@ function setupBackToTop() {
 
   window.addEventListener('scroll', toggleVisibility, { passive: true });
   toggleVisibility();
+}
+
+function setupAnchorOffsets() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  const getOffsetValue = () => {
+    const rootStyles = getComputedStyle(document.documentElement);
+    const header = document.querySelector('.site-header');
+    const headerHeightVar = parseFloat(rootStyles.getPropertyValue('--header-height')) || 0;
+    const headerHeight = header ? header.getBoundingClientRect().height : headerHeightVar;
+    return headerHeight + 24;
+  };
+
+  const scrollWithOffset = (hash, smooth) => {
+    if (!hash || hash === '#') return;
+    const target = document.querySelector(hash);
+    if (!target) return;
+
+    const offset = getOffsetValue();
+    const elementTop = target.getBoundingClientRect().top + window.scrollY;
+    const top = Math.max(0, elementTop - offset);
+
+    window.scrollTo({
+      top,
+      behavior: smooth && !prefersReducedMotion.matches ? 'smooth' : 'auto'
+    });
+  };
+
+  if (window.location.hash) {
+    const adjustInitial = () => scrollWithOffset(window.location.hash, false);
+    requestAnimationFrame(adjustInitial);
+    window.addEventListener('load', adjustInitial, { once: true });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    if (link.classList.contains('skip-link')) {
+      return;
+    }
+
+    link.addEventListener('click', event => {
+      const hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+      const target = document.querySelector(hash);
+      if (!target) return;
+
+      event.preventDefault();
+      history.pushState(null, '', hash);
+      scrollWithOffset(hash, true);
+    });
+  });
+
+  window.addEventListener('hashchange', () => {
+    scrollWithOffset(window.location.hash, false);
+  });
 }
 
 function updateYear() {
