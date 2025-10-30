@@ -89,12 +89,64 @@
 
     <main id="main" role="main">
       <!-- Hero principal -->
-      <section class="hero-full hero-elevated" aria-label="Hero – Estudio Salvi">
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="container hero-layout">
-          <div class="hero-copy">
-            <img class="hero-logo" src="./img/logo_transparent.webp" alt="Logotipo Estudio Salvi">
-          </div>
+      <section id="hero" class="hero-split" aria-label="Estudio Salvi - Abogados">
+        <div class="hero-media">
+          <svg class="hero-graphic" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustración estilizada del Puente de la Mujer y skyline de Puerto Madero">
+            <defs>
+              <linearGradient id="hero-sky" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#9ad1f4" />
+                <stop offset="45%" stop-color="#bcdff6" />
+                <stop offset="85%" stop-color="#f7f7f7" />
+              </linearGradient>
+              <linearGradient id="hero-water" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#4d8db9" stop-opacity="0.9" />
+                <stop offset="60%" stop-color="#6fa7c9" stop-opacity="0.6" />
+                <stop offset="100%" stop-color="#f7f7f7" stop-opacity="0.1" />
+              </linearGradient>
+              <linearGradient id="hero-bridge" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#f5f0d8" />
+                <stop offset="100%" stop-color="#f7f7f7" />
+              </linearGradient>
+              <linearGradient id="hero-sun" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffe8a3" stop-opacity="0.8" />
+                <stop offset="100%" stop-color="#f7f7f7" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <rect fill="url(#hero-sky)" width="900" height="420" />
+            <rect y="390" width="900" height="210" fill="url(#hero-water)" />
+            <circle cx="180" cy="150" r="70" fill="url(#hero-sun)" />
+            <g fill="#ffffff" opacity="0.82">
+              <rect x="520" y="110" width="46" height="200" rx="8" />
+              <rect x="580" y="140" width="38" height="180" rx="7" />
+              <rect x="630" y="95" width="30" height="225" rx="6" />
+              <rect x="670" y="130" width="32" height="185" rx="6" />
+              <rect x="710" y="160" width="26" height="155" rx="5" />
+              <rect x="750" y="180" width="28" height="135" rx="5" />
+            </g>
+            <g fill="#e8eef5" opacity="0.68">
+              <rect x="480" y="160" width="26" height="140" rx="5" />
+              <rect x="440" y="175" width="24" height="125" rx="4" />
+              <rect x="400" y="190" width="22" height="110" rx="4" />
+            </g>
+            <path d="M40 356 Q360 230 860 120 L885 132 Q420 320 68 470 Z" fill="url(#hero-bridge)" opacity="0.94" />
+            <path d="M110 420 Q430 310 830 210" stroke="#d9dadd" stroke-width="16" stroke-linecap="round" fill="none" />
+            <path d="M130 432 Q430 322 790 240" stroke="#e7d9aa" stroke-width="20" stroke-linecap="round" fill="none" />
+            <g fill="#ffffff" opacity="0.9">
+              <rect x="90" y="420" width="120" height="30" rx="6" />
+              <rect x="240" y="410" width="160" height="34" rx="6" />
+              <rect x="420" y="398" width="120" height="32" rx="6" />
+            </g>
+            <g fill="#cfdae5" opacity="0.65">
+              <rect x="560" y="400" width="110" height="28" rx="6" />
+              <rect x="690" y="388" width="140" height="26" rx="6" />
+            </g>
+          </svg>
+        </div>
+        <div class="hero-content">
+          <span class="pretitle">Estudio jurídico penal</span>
+          <h1>Defensa penal estratégica</h1>
+          <p class="lead">Asesoría y defensa en causas complejas de penal económico y fuero federal.</p>
+          <a class="btn-refined primary" href="./contacto.html">Contactar ahora</a>
         </div>
       </section>
 
