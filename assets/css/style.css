@@ -1084,9 +1084,10 @@ main {
 .hero-split {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
-  align-items: center;
-  height: 62vh;
-  min-height: 420px;
+  align-items: flex-start;
+  height: clamp(420px, 52vh, 560px);
+  --hero-media-offset: clamp(-120px, -10vw, -60px); /* Ajustá los límites para subir/bajar la imagen en distintos viewports */
+  --hero-content-offset: clamp(-80px, -7vw, -40px); /* Ajustá los límites para acercar/alejar el contenido en desktop */
   background: #f7f7f7;
   overflow: clip;
   position: relative;
@@ -1113,7 +1114,10 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left center;
+  object-position: left top;
+  position: relative;
+  transform: translateY(var(--hero-media-offset)); /* Ajustá el clamp de --hero-media-offset para moverla sin depender de pixeles fijos */
+  z-index: -1; /* Cambiá si necesitás que la foto quede por detrás/adelante de otros elementos */
   display: block;
 }
 
@@ -1121,6 +1125,8 @@ main {
   max-width: 600px;
   margin-inline: clamp(16px, 4vw, 40px);
   z-index: 1;
+  position: relative;
+  transform: translateY(var(--hero-content-offset)); /* Ajustá el clamp de --hero-content-offset para controlar la cercanía al navbar */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1137,14 +1143,25 @@ main {
 
 @media (max-width: 1199px) {
   .hero-split {
-    height: 48vh;
+    height: clamp(380px, 46vh, 520px);
+    --hero-media-offset: clamp(-90px, -10vw, -36px); /* Ajustá este rango si necesitás otra proporción en pantallas medianas */
+    --hero-content-offset: clamp(-48px, -7vw, -20px); /* Ajustá este rango para el contenido en pantallas medianas */
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-split {
+    --hero-media-offset: clamp(-68px, -8vw, -24px); /* Ajustá aún más para tablets (iPad) */
+    --hero-content-offset: clamp(-36px, -6vw, -12px); /* Ajustá el desplazamiento del contenido para tablets */
   }
 }
 
 @media (max-width: 767px) {
   .hero-split {
-    height: 38vh;
+    height: clamp(320px, 36vh, 420px);
+    --hero-media-offset: clamp(-56px, -16vw, -16px); /* Ajustá este rango para móviles */
+    --hero-content-offset: clamp(-28px, -9vw, -6px); /* Ajustá este rango para el copy en móviles */
     grid-template-columns: 1fr;
   }
 
@@ -1166,6 +1183,13 @@ main {
 
   .hero-media::after {
     background: linear-gradient(to bottom, rgba(247, 247, 247, 0) 55%, #f7f7f7 100%);
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-split {
+    --hero-media-offset: clamp(-150px, -11vw, -84px); /* Ajustá sólo para pantallas grandes (1440px+) */
+    --hero-content-offset: clamp(-84px, -8vw, -40px); /* Ajustá el desplazamiento del texto en pantallas grandes */
   }
 }
 
