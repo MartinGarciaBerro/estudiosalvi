@@ -1,0 +1,12 @@
+{
+  "name": "estudiosalvi",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "shot:hero": "node ./scripts/screenshot-hero.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.41.2"
+  }
+}
