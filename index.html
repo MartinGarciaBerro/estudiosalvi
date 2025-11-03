@@ -58,7 +58,7 @@
     }
     </script>
   </head>
-  <body id="top">
+  <body id="top" class="home">
     <a href="#main" class="skip-link">Saltar al contenido</a>
 
     <!-- Header / Navegación -->
@@ -100,13 +100,16 @@
 
 
       <!-- Quiénes somos -->
-      <section id="quienes-somos" class="section parallax-section" aria-label="Quiénes somos – Estudio Salvi">
-        <div class="parallax-bg" aria-hidden="true"></div>
-        <div class="container text-center" data-reveal>
-          <span class="pretitle">Quiénes somos</span>
-          <h2>CONOCÉ LA HISTORIA DE NUESTRO ESTUDIO</h2>
-          <p>El Estudio Salvi fue fundado hace más de 25 años por Oscar Mario Salvi.</p>
-          <a href="./quienes-somos.html" class="btn-refined primary">Ver más</a>
+      <section id="quienes-somos" class="who-section" aria-label="Quiénes somos - Estudio Salvi">
+        <div class="container who-section__inner">
+          <figure class="who-section__media" data-reveal="slide-right">
+            <img src="img/1.avif" alt="Galería del Palacio de Justicia en Buenos Aires">
+          </figure>
+          <div class="who-section__card">
+            <h2 data-reveal="slide-up" data-reveal-delay="0.05">Qui&eacute;nes somos</h2>
+            <p data-reveal="slide-up" data-reveal-delay="0.15">Nuestro Estudio se consolid&oacute; en la pr&aacute;ctica comprometida y din&aacute;mica del derecho penal y procesal penal, tomando como punto de partida la visi&oacute;n de su fundador, el Dr. Oscar Mario Salvi. La impronta est&aacute; marcada por su trayectoria con inicio en el ejercicio de la funci&oacute;n p&uacute;blica, habiendo ocupado el cargo de juez federal con distinguida probidad e imparcialidad, hasta que por su voluntad decidi&oacute; dedicarse al ejercicio profesional en forma privada.</p>
+            <a href="./quienes-somos.html" class="who-section__cta" data-reveal="fade" data-reveal-delay="0.28">Ver m&aacute;s</a>
+          </div>
         </div>
       </section>
 
@@ -114,13 +117,13 @@
       <!-- Equipo -->
       <section id="equipo" class="section team-section" aria-labelledby="equipo-title">
         <div class="container">
-          <div class="team-intro" data-reveal>
+          <div class="team-intro" data-reveal="slide-up">
             <span class="pretitle">Nuestro equipo</span>
-            <h2 id="equipo-title">Socios y profesionales dedicados a tu caso</h2>
-            <p class="lead">Profesionales con formaci&oacute;n acad&eacute;mica s&oacute;lida y experiencia en juzgados federales, fiscal&iacute;as y consultor&iacute;a para compa&ntilde;&iacute;as locales y multinacionales.</p>
+            <h2 id="equipo-title">Profesionales dedicados a tu caso</h2>
+            <p class="lead">con formaci&oacute;n acad&eacute;mica s&oacute;lida y experiencia en juzgados federales, fiscal&iacute;as y consultor&iacute;a para compa&ntilde;&iacute;as locales y multinacionales.</p>
           </div>
           <div class="team-showcase">
-            <article class="team-card" data-reveal>
+            <article class="team-card" data-reveal="zoom">
               <picture class="team-portrait">
                 <source srcset="img/OscarSalvi.avif" type="image/avif">
                 <img src="img/OscarSalvi.avif" alt="Retrato de Oscar Salvi" loading="lazy" width="480" height="560">
@@ -136,7 +139,7 @@
               </div>
             </article>
             
-            <article class="team-card" data-reveal>
+            <article class="team-card" data-reveal="zoom" data-reveal-delay="0.1">
               <picture class="team-portrait">
                 <source srcset="img/MariaFiorito.avif" type="image/avif">
                 <img src="img/MariaFiorito.avif" alt="Retrato de Mar&iacute;a Fiorito" loading="lazy" width="480" height="560">
@@ -151,7 +154,7 @@
                 <a class="team-profile" href="./equipo.html#maria-fiorito">Ver perfil</a>
               </div>
             </article>
-            <article class="team-card" data-reveal>
+            <article class="team-card" data-reveal="zoom" data-reveal-delay="0.2">
               <picture class="team-portrait">
                 <source srcset="img/MatiasMoran.avif" type="image/avif">
                 <img src="img/MatiasMoran.avif" alt="Retrato de Mat&iacute;as Mor&aacute;n" loading="lazy" width="480" height="560">
@@ -166,7 +169,7 @@
                 <a class="team-profile" href="./equipo.html#matias-moran">Ver perfil</a>
               </div>
             </article>
-            <article class="team-card" data-reveal>
+            <article class="team-card" data-reveal="zoom" data-reveal-delay="0.3">
               <picture class="team-portrait">
                 <source srcset="img/SantiagoVaccaro.avif" type="image/avif">
                 <img src="img/SantiagoVaccaro.avif" alt="Retrato de Santiago Vaccaro" loading="lazy" width="480" height="560">
@@ -181,7 +184,7 @@
                 <a class="team-profile" href="./equipo.html#santiago-vaccaro">Ver perfil</a>
               </div>
             </article>
-            <article class="team-card" data-reveal>
+            <article class="team-card" data-reveal="zoom" data-reveal-delay="0.4">
               <picture class="team-portrait">
                 <source srcset="img/ValeriadelBonoLonardi.avif" type="image/avif">
                 <img src="img/ValeriadelBonoLonardi.avif" alt="Retrato de Valeria del Bono Lonardi" loading="lazy" width="480" height="560">
@@ -196,8 +199,11 @@
                 <a class="team-profile" href="./equipo.html#valeria-del-bono-lonardi">Ver perfil</a>
               </div>
             </article>
-            <article class="team-card" data-reveal>
-              <div class="team-portrait is-placeholder" role="img" aria-label="Retrato de Joaqu&iacute;n Garc&iacute;a Berro (placeholder)">JGB</div>
+            <article class="team-card" data-reveal="zoom" data-reveal-delay="0.5">
+              <picture class="team-portrait">
+                <img src="img/JoaquinGarciaBerro_5-modified.jpg" alt="Retrato de Joaqu&iacute;n Garc&iacute;a Berro" loading="lazy" width="480" height="560">
+              </picture>
+
               <div class="team-meta">
                 <h3>Joaqu&iacute;n Garc&iacute;a Berro</h3>
               </div>
@@ -209,7 +215,7 @@
               </div>
             </article>
           </div>
-          <div class="team-cta" data-reveal>
+          <div class="team-cta" data-reveal="slide-up" data-reveal-delay="0.55">
             <a href="./equipo.html" class="btn-refined primary">Conocer a todo el equipo</a>
           </div>
         </div>
@@ -217,12 +223,12 @@
       <!-- Áreas de práctica -->
       <section id="areas" class="section alt practice-section" aria-labelledby="areas-title">
         <div class="container practice-inner">
-          <header class="practice-header" data-reveal>
+          <header class="practice-header" data-reveal="slide-up">
             <span class="pretitle">Áreas de práctica</span>
             <h2 id="areas-title">Defensa penal a medida</h2>
             <p class="lead">Diseñamos estrategias penales específicas para cada situación crítica.</p>
           </header>
-          <div class="practice-summary stack" data-reveal>
+          <div class="practice-summary stack" data-reveal="slide-up" data-reveal-delay="0.1">
             <p>Descubrí cómo abordamos la defensa penal individual, corporativa y preventiva con equipos especializados.</p>
             <a class="btn-refined primary" href="./area.html">Ver áreas de práctica</a>
           </div>
@@ -233,12 +239,12 @@
       <section id="contacto" class="section contact" aria-labelledby="contacto-title">
         <div class="container">
           <div class="contact-grid">
-            <div class="contact-intro">
+            <div class="contact-intro" data-reveal="slide-up">
               <span class="pretitle">Contacto</span>
               <h2 id="contacto-title">Coordinemos una consulta</h2>
               <p class="lead">Respondemos consultas en un máximo de 48 horas hábiles. Para situaciones urgentes, comunicate por teléfono y priorizaremos la atención.</p>
             </div>
-            <div class="contact-card">
+            <div class="contact-card" data-reveal="slide-left" data-reveal-delay="0.1">
               <div class="contact-details">
                 <div>
                   <span class="contact-label">Teléfono</span>
@@ -304,3 +310,5 @@
     <script src="assets/js/app.js" defer></script>
   </body>
 </html>
+
+
