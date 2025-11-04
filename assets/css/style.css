@@ -1050,6 +1050,22 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 @media (min-width: 900px) { .contact-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
 .contact-card { background: #fff; border-radius: var(--radius); padding: var(--gap-4); box-shadow: var(--shadow); display: grid; gap: var(--gap-4); }
 .contact-details { display: grid; gap: var(--gap-3); }
+.contact-card--with-form { gap: var(--gap-5); align-items: start; }
+.contact-card--with-form .contact-details { gap: var(--gap-4); text-align: center; justify-items: center; }
+.contact-card--with-form .contact-details-title { font-family: var(--font-headline); font-size: clamp(1.1rem, 2vw, 1.3rem); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text); }
+.contact-card--with-form .contact-details > div { display: grid; gap: var(--gap-1); justify-items: center; }
+.contact-card--with-form .contact-form { padding: 0; background: transparent; box-shadow: none; display: grid; gap: var(--gap-4); }
+.contact-card--with-form .contact-form > div { display: grid; gap: var(--gap-2); }
+.contact-card--with-form .contact-form button { justify-self: flex-start; }
+.contact-card--with-form .contact-form .form-feedback { margin: 0; }
+@media (min-width: 768px) {
+  .contact-card--with-form { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
+  .contact-card--with-form .contact-form { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .contact-card--with-form .contact-form > div:nth-child(3),
+  .contact-card--with-form .contact-form > div:nth-child(4),
+  .contact-card--with-form .contact-form button,
+  .contact-card--with-form .contact-form .form-feedback { grid-column: 1 / -1; }
+}
 .contact-label { font-family: var(--font-headline); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.12em; color: var(--color-muted); }
 .contact-link { color: var(--color-text); font-weight: 600; word-break: break-word; }
 .map-container { margin-top: var(--gap-5); }

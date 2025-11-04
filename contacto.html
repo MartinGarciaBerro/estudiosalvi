@@ -69,13 +69,14 @@
       </section>
 
       <section class="section" aria-labelledby="contacto-title">
-        <div class="container contact-grid">
-          <div class="stack" data-reveal>
+        <div class="container" data-reveal>
+          <div class="stack">
             <h2 id="contacto-title">Respondemos consultas en la brevedad.</h2>
-            <div class="contact-card">
+            <div class="contact-card contact-card--with-form">
               <div class="contact-details">
+                <h3 class="contact-details-title">Cont&aacute;ctenos</h3>
                 <div>
-                  <span class="contact-label">Teléfono</span>
+                  <span class="contact-label">Tel&eacute;fono</span>
                   <a class="contact-link" href="tel:+541148168880">+54 11 4816 8880 / 8881</a>
                 </div>
                 <div>
@@ -83,37 +84,38 @@
                   <a class="contact-link" href="mailto:info@estudiosalvi.com.ar">info@estudiosalvi.com.ar</a>
                 </div>
                 <div>
-                  <span class="contact-label">Dirección</span>
+                  <span class="contact-label">Direcci&oacute;n</span>
                   <p>Arenales 1457, Recoleta, CABA</p>
                 </div>
               </div>
+              <form class="form-shell contact-form" action="mailto:info@estudiosalvi.com.ar" method="post" novalidate>
+                <div>
+                  <label for="nombre">Nombre</label>
+                  <input id="nombre" name="nombre" required autocomplete="name" aria-required="true" aria-invalid="false" placeholder="Ingrese su nombre">
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required autocomplete="email" aria-required="true" aria-invalid="false" placeholder="Ingrese su email">
+                </div>
+                <div>
+                  <label for="asunto">Asunto</label>
+                  <input id="asunto" name="asunto" required aria-required="true" aria-invalid="false" placeholder="Ingrese su asunto">
+                </div>
+                <div>
+                  <label for="mensaje">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" rows="6" required aria-required="true" aria-invalid="false" placeholder="Ingrese su mensaje"></textarea>
+                </div>
+                <button type="submit" class="primary">Enviar</button>
+                <p class="form-feedback" aria-live="polite"></p>
+              </form>
             </div>
-          </div>
-
-          <div data-reveal>
-            <form class="form-shell" action="mailto:info@estudiosalvi.com.ar" method="post" novalidate>
-              <div>
-                <label for="nombre">Nombre</label>
-                <input id="nombre" name="nombre" required autocomplete="name" aria-required="true" aria-invalid="false">
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required autocomplete="email" aria-required="true" aria-invalid="false">
-              </div>
-              <div>
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="6" required aria-required="true" aria-invalid="false"></textarea>
-              </div>
-              <button type="submit" class="primary">Enviar</button>
-              <p class="form-feedback" aria-live="polite"></p>
-            </form>
           </div>
         </div>
         <div class="container map-container" data-reveal>
           <div class="map-shell">
             <iframe
               class="map-frame"
-              title="Ubicaci��n Estudio Salvi en Google Maps"
+              title="Ubicaci&oacute;n Estudio Salvi en Google Maps"
               src="https://maps.google.com/maps?q=Arenales%201457%20Recoleta%20CABA&t=&z=16&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
