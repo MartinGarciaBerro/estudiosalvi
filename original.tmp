@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es-AR">
   <head>
     <meta charset="utf-8">
@@ -6,17 +6,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nuestros Clientes | Estudio Salvi - Abogados penalistas</title>
-    <meta name="description" content="Conoce algunos de nuestros clientes y casos de éxito. Líderes en el desarrollo económico, industrial y productivo de la Argentina.">
+    <meta name="description" content="Conoce algunos de nuestros clientes y casos de ├®xito. L├¡deres en el desarrollo econ├│mico, industrial y productivo de la Argentina.">
     <link rel="canonical" href="https://www.estudiosalvi.com.ar/clientes">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Nuestros Clientes | Estudio Salvi">
-    <meta property="og:description" content="Conoce algunos de nuestros clientes y casos de éxito. Líderes en el desarrollo económico, industrial y productivo de la Argentina.">
+    <meta property="og:description" content="Conoce algunos de nuestros clientes y casos de ├®xito. L├¡deres en el desarrollo econ├│mico, industrial y productivo de la Argentina.">
     <meta property="og:image" content="img/5 Campo G web.jpg">
     <meta property="og:locale" content="es_AR">
 
-    <!-- Tipografías -->
+    <!-- Tipograf├¡as -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
@@ -26,7 +26,7 @@
     <!-- CSS principal -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Iconografía -->
+    <!-- Iconograf├¡a -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer">
 
     <!-- Favicon -->
@@ -41,18 +41,18 @@
           <img src="img/logo.avif" alt="Estudio Salvi" width="150" height="50">
         </a>
 
-        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir men├║ de navegaci├│n">
           <span class="nav-toggle-bar" aria-hidden="true"></span>
           <span class="nav-toggle-bar" aria-hidden="true"></span>
           <span class="nav-toggle-bar" aria-hidden="true"></span>
         </button>
 
-        <nav id="site-nav" class="site-nav" role="navigation" aria-label="Navegación principal">
+        <nav id="site-nav" class="site-nav" role="navigation" aria-label="Navegaci├│n principal">
           <ul class="nav-list">
             <li><a class="nav-link" href="./index.html">Inicio</a></li>
-            <li><a class="nav-link" href="./quienes-somos.html">Quiénes somos</a></li>
+            <li><a class="nav-link" href="./quienes-somos.html">Qui├®nes somos</a></li>
             <li><a class="nav-link" href="./equipo.html">Equipo</a></li>
-            <li><a class="nav-link" href="./area.html">Áreas </a></li>
+            <li><a class="nav-link" href="./area.html">├üreas </a></li>
             <li><a class="nav-link" href="./clientes.html" aria-current="page">Clientes</a></li>
             <li><a class="nav-link" href="./contacto.html">Contacto</a></li>
           </ul>
@@ -61,30 +61,17 @@
     </header>
 
     <main id="main" role="main">
-      <section class="hero-triptych" aria-label="Nuestros Clientes - Estudio Salvi">
-        <div class="hero-triptych__grid" aria-hidden="true">
-          <figure class="hero-triptych__panel">
-            <img src="img/4 Acero web.jpg" alt="">
-          </figure>
-          <figure class="hero-triptych__panel">
-            <img src="img/7 Ptroleo web.jpg" alt="">
-          </figure>
-          <figure class="hero-triptych__panel">
-            <img src="img/5 Campo G web.jpg" alt="">
-          </figure>
-        </div>
-        <div class="hero-triptych__content">
-          <div class="container hero-triptych__text stack" data-reveal>
-            <h1>Nuestros Clientes</h1>
-            <p class="lead">L&iacute;deres en el desarrollo econ&oacute;mico, industrial y productivo de la Argentina.</p>
-          </div>
+      <section class="hero-small" style="background-image: url('img/6\ Campo\ T\ web.jpg');" aria-label="Nuestros Clientes - Estudio Salvi">
+        <div class="container stack" data-reveal>
+          <h1>Nuestros Clientes</h1>
+          <p class="lead">L├¡deres en el desarrollo econ├│mico, industrial y productivo de la Argentina</p>
         </div>
       </section>
 
       <section class="section" aria-labelledby="intro-title">
         <div class="container stack text-center">
           <h2 id="intro-title" data-reveal>Confianza y Experiencia</h2>
-          <p class="lead" data-reveal>Nuestros clientes confían en nosotros para brindarles la mejor defensa y asesoramiento en derecho penal. Trabajamos con empresas líderes, ejecutivos y profesionales que requieren un servicio legal de excelencia y discreción absoluta.</p>
+          <p class="lead" data-reveal>Nuestros clientes conf├¡an en nosotros para brindarles la mejor defensa y asesoramiento en derecho penal. Trabajamos con empresas l├¡deres, ejecutivos y profesionales que requieren un servicio legal de excelencia y discreci├│n absoluta.</p>
         </div>
       </section>
 
@@ -95,17 +82,17 @@
             <article class="client-card" data-reveal>
               <div class="client-card-icon" aria-hidden="true"><i class="fa-solid fa-gears"></i></div>
               <h3>Industria y Manufactura</h3>
-              <p>Empresas industriales, manufactureras y de transformación que requieren asesoramiento en compliance y prevención de riesgos penales.</p>
+              <p>Empresas industriales, manufactureras y de transformaci├│n que requieren asesoramiento en compliance y prevenci├│n de riesgos penales.</p>
             </article>
             <article class="client-card" data-reveal>
               <div class="client-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
               <h3>Servicios Financieros</h3>
-              <p>Bancos, entidades financieras y empresas del sector financiero que necesitan defensa especializada en delitos económicos.</p>
+              <p>Bancos, entidades financieras y empresas del sector financiero que necesitan defensa especializada en delitos econ├│micos.</p>
             </article>
             <article class="client-card" data-reveal>
               <div class="client-card-icon" aria-hidden="true"><i class="fa-solid fa-building-columns"></i></div>
-              <h3>Sector Público</h3>
-              <p>Funcionarios públicos y entidades estatales que requieren asesoramiento en delitos contra la administración pública.</p>
+              <h3>Sector P├║blico</h3>
+              <p>Funcionarios p├║blicos y entidades estatales que requieren asesoramiento en delitos contra la administraci├│n p├║blica.</p>
             </article>
             <article class="client-card" data-reveal>
               <div class="client-card-icon" aria-hidden="true"><i class="fa-solid fa-briefcase"></i></div>
@@ -115,12 +102,12 @@
             <article class="client-card" data-reveal>
               <div class="client-card-icon" aria-hidden="true"><i class="fa-solid fa-earth-americas"></i></div>
               <h3>Empresas Internacionales</h3>
-              <p>Corporaciones multinacionales y empresas con operaciones internacionales que requieren asesoramiento en cooperación internacional.</p>
+              <p>Corporaciones multinacionales y empresas con operaciones internacionales que requieren asesoramiento en cooperaci├│n internacional.</p>
             </article>
             <article class="client-card" data-reveal>
               <div class="client-card-icon" aria-hidden="true"><i class="fa-solid fa-user-shield"></i></div>
               <h3>Defensa Individual</h3>
-              <p>Personas físicas que enfrentan procesos penales y requieren una defensa integral y comprometida.</p>
+              <p>Personas f├¡sicas que enfrentan procesos penales y requieren una defensa integral y comprometida.</p>
             </article>
           </div>
         </div>
@@ -128,8 +115,8 @@
 
       <section class="section" aria-labelledby="cta-title">
         <div class="container stack text-center" data-reveal>
-          <h2 id="cta-title">¿Necesitas Asesoramiento Legal?</h2>
-          <p class="lead">Únete a nuestros clientes satisfechos y obtén la mejor defensa penal disponible.</p>
+          <h2 id="cta-title">┬┐Necesitas Asesoramiento Legal?</h2>
+          <p class="lead">├Ünete a nuestros clientes satisfechos y obt├®n la mejor defensa penal disponible.</p>
           <a class="btn primary cta-button" href="./contacto.html">Contactar ahora</a>
         </div>
       </section>
@@ -143,11 +130,11 @@
             <p class="small">Defensa penal con trayectoria</p>
           </div>
           <div class="footer-links">
-            <h3>Enlaces rápidos</h3>
+            <h3>Enlaces r├ípidos</h3>
             <ul>
               <li><a href="./index.html">Inicio</a></li>
-              <li><a href="./area.html">Áreas</a></li>
-              <li><a href="./quienes-somos.html">Quiénes somos</a></li>
+              <li><a href="./area.html">├üreas</a></li>
+              <li><a href="./quienes-somos.html">Qui├®nes somos</a></li>
               <li><a href="./equipo.html">Equipo</a></li>
               <li><a href="./clientes.html">Clientes</a></li>
               <li><a href="./contacto.html">Contacto</a></li>
@@ -155,13 +142,13 @@
           </div>
           <div class="footer-contact">
             <h3>Contacto</h3>
-            <p><strong>Dirección:</strong><br>Arenales 1457, CABA</p>
-            <p><strong>Teléfono:</strong><br>+54-11-4816-8880<br>+54-11-4816-8881</p>
+            <p><strong>Direcci├│n:</strong><br>Arenales 1457, CABA</p>
+            <p><strong>Tel├®fono:</strong><br>+54-11-4816-8880<br>+54-11-4816-8881</p>
             <p><strong>Email:</strong><br><a href="mailto:info@estudiosalvi.com.ar">info@estudiosalvi.com.ar</a></p>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© <span id="year"></span> Estudio Salvi — Todos los derechos reservados</p>
+          <p>┬® <span id="year"></span> Estudio Salvi ÔÇö Todos los derechos reservados</p>
         </div>
       </div>
     </footer>
