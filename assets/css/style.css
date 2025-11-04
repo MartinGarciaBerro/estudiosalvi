@@ -231,7 +231,7 @@ header.site-header {
 .site-nav .nav-link:hover,
 .site-nav .nav-link:focus-visible {
   color: var(--color-accent-dark);
-  background-color: rgba(68, 126, 109, 0.08);
+  background-color: transparent;
   text-decoration: none;
 }
 .site-nav .nav-link:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -4px; border-radius: var(--radius-sm); }
@@ -419,6 +419,24 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 
 .hero-small .lead {
   color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-small--offset {
+  padding: clamp(140px, 35vh, 300px) 0 clamp(82px, 18vh, 150px);
+}
+
+@media (min-width: 768px) {
+  .hero-small--offset {
+    align-items: end;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-small--offset {
+    padding: clamp(120px, 38vh, 208px) 0 clamp(78px, 18vh, 128px);
+    align-items: center;
+  }
+
 }
 
 .parallax-section {
