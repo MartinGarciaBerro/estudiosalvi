@@ -1607,27 +1607,48 @@ main {
 
 /* ===== LAPTOPS CHICAS (1280–1439) ===== */
 @media (min-width: 1280px) and (max-width: 1439px) {
-  .who-section__inner { max-width: 1250px; grid-template-columns: 1fr 0.38fr; }
-  .who-section__media { margin-left: 1.5rem; height: 400px; transform: translateY(-14px); }
+  .who-section__inner {
+    max-width: 1250px;
+    grid-template-columns: 1fr 0.38fr; /* mantenemos relación general */
+  }
+
+  .who-section__media {
+    margin-left: 1.5rem;
+    height: 360px;                   /* ↓ antes 400px */
+    transform: translateY(-12px);    /* leve ajuste */
+  }
+
   .who-section__card  {
-    width: clamp(420px, 33vw, 520px);
+    width: clamp(460px, 36vw, 560px);/* ↑ antes clamp(420px,33vw,520px) */
     margin-left: -70px;
-    margin-right: 20px;
-    padding: 44px 34px 48px 34px;
-    transform: translateY(-14px);
+    margin-right: 12px;              /* ↓ antes 20px, para ganar horizontal */
+    padding: 42px 30px 46px 30px;    /* leve compactado */
+    transform: translateY(-12px);
   }
 }
 
-/* ===== iPAD PRO HORIZONTAL (1024–1366px) ===== */
-@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
-  .who-section__inner { grid-template-columns: 1fr 0.25fr; max-width: 1100px; }
-  .who-section__media { margin-left: 0.75rem; height: 380px; transform: translateY(-8px); }
-  .who-section__card  {
-    justify-self: end;
-    width: 400px;
-    min-height: 260px;
+/* ===== iPAD PRO HORIZONTAL (1000–1366px) ===== */
+@media (min-width: 1000px) and (max-width: 1366px) and (orientation: landscape) {
+  .who-section__inner {
+    grid-template-columns: 1fr 0.28fr; /* ↑ card un toque más protagonista (antes 0.25fr) */
+    max-width: 1100px;
+  }
+
+  .who-section__media {
+    margin-left: 0.75rem;
+    height: 340px;                    /* ↓ antes 380px */
     transform: translateY(-8px);
   }
+
+  .who-section__card  {
+    justify-self: end;
+    width: 440px;                     /* ↑ antes 400px */
+    min-height: 260px;
+    margin-right: 12px;               /* agrega un poquito más de ancho útil */
+    transform: translateY(-8px);
+    padding: 38px 28px 42px 28px;     /* compactado sutil */
+  }
+
   .who-section__card h2 { font-size: clamp(1.6rem, 1.2rem + 1.2vw, 1.9rem); }
   .who-section__card p  { font-size: clamp(0.9rem, 0.85rem + 0.3vw, 0.95rem); }
 }
@@ -1640,12 +1661,14 @@ main {
     max-width: 720px;
     margin: 0 auto;
   }
+
   .who-section__media {
     margin-left: 0.75rem;
-    height: 380px;
-    transform: translateY(-8px);
+    height: 340px;                    /* ↓ antes 380px, para consistencia */
+    transform: translateY(-6px);
     overflow: hidden;
   }
+
   .who-section__card {
     width: 100%;
     max-width: 100%;
@@ -1656,8 +1679,9 @@ main {
   }
 }
 
+
 /* ===== TABLET (768–991px) ===== */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 999px) {
   .who-section__inner {
     display: block;
     width: 92vw;
