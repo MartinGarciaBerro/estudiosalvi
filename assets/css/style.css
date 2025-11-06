@@ -387,8 +387,8 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   display: grid;
   place-items: center;
   overflow: hidden;
-  min-height: clamp(360px, 62vh, 600px);
-  padding: clamp(96px, 20vw, 168px) 0;
+  min-height: clamp(280px, 48vh, 440px);
+  padding: clamp(60px, 16vw, 120px) 0;
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -418,13 +418,13 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 }
 
 .hero-small .lead {
-  color: rgba(255, 255, 255, 0.85);
-}
+    color: rgba(255, 255, 255, 0.85);
+  }
 
 .hero-triptych {
   position: relative;
   isolation: isolate;
-  min-height: clamp(360px, 62vh, 600px);
+  min-height: clamp(300px, 50vh, 480px);
   overflow: hidden;
   background: #ffffff;
   color: #0f1614;
@@ -510,7 +510,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(96px, 20vw, 168px) 0;
+  padding: clamp(56px, 14vw, 120px) 0;
 }
 
 .hero-triptych__text {
@@ -561,7 +561,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 
 @media (max-width: 1024px) {
   .hero-triptych {
-    min-height: clamp(360px, 62vh, 600px);
+    min-height: clamp(280px, 48vh, 440px);
   }
 
   .hero-triptych__grid {
@@ -576,7 +576,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 
 @media (max-width: 820px) {
   .hero-triptych {
-    min-height: clamp(360px, 62vh, 600px);
+    min-height: clamp(260px, 46vh, 400px);
   }
 
   .hero-triptych__grid {
@@ -603,12 +603,12 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   }
 
   .hero-triptych__content {
-    padding: clamp(96px, 20vw, 168px) 0;
+    padding: clamp(56px, 14vw, 120px) 0;
   }
 }
 
 .hero-small--offset {
-  padding: clamp(140px, 35vh, 300px) 0 clamp(82px, 18vh, 150px);
+  padding: clamp(96px, 26vh, 200px) 0 clamp(60px, 14vh, 120px);
 }
 
 @media (min-width: 768px) {
@@ -619,7 +619,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 
 @media (max-width: 767px) {
   .hero-small--offset {
-    padding: clamp(120px, 38vh, 208px) 0 clamp(78px, 18vh, 128px);
+    padding: clamp(80px, 30vh, 160px) 0 clamp(52px, 14vh, 96px);
     align-items: center;
   }
 
@@ -715,7 +715,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   align-items: center;
   margin-top: calc(var(--gap-4) + var(--gap-2));
 }
-.section { padding-block: clamp(72px, 12vw, 120px); position: relative; }
+.section { padding-block: clamp(36px, 6vw, 72px); position: relative; }
 .section.alt { background: var(--color-surface); }
 .section.alt.sectores {
   background-image: url("../../img/7 Ptroleo web.jpg");
@@ -745,7 +745,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 .team-section {
   --team-anim-duration: 0.5s;
   position: relative;
-  padding-block: clamp(48px, 9vw, 96px);
+  padding-block: clamp(36px, 7vw, 80px);
   display: grid;
   align-items: center;
   color: var(--color-text);
@@ -972,7 +972,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 .value-card { background: #fff; border-radius: var(--radius-sm); padding: var(--gap-4); box-shadow: var(--shadow); display: grid; gap: var(--gap-2); }
 .value-card h3 { font-size: clamp(1.25rem, 2vw, 1.45rem); }
 
-.practice-section { padding-block: clamp(56px, 10vw, 92px); } /* // tweak: mâ”œÃ­rgenes verticales */
+.practice-section { padding-block: clamp(40px, 7vw, 72px); } /* // tweak: mâ”œÃ­rgenes verticales */
 .practice-inner { display: grid; gap: clamp(32px, 6vw, 48px); } /* // tweak: separaciâ”œâ”‚n general */
 .practice-header { max-width: clamp(320px, 64ch, 720px); display: grid; gap: var(--gap-3); }
 .practice-summary {
@@ -1086,7 +1086,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 footer.site-footer {
   background: #0f1614;
   color: rgba(255, 255, 255, 0.78);
-  padding-block: clamp(var(--gap-5), 8vw, var(--gap-6));
+  padding-block: clamp(var(--gap-4), 6vw, 40px);
 }
 .footer-content {
   display: flex;
@@ -1313,7 +1313,7 @@ main {
 }
 
 #historia.section {
-  padding-block: clamp(72px, 12vw, 120px);
+  padding-block: clamp(36px, 6vw, 72px);
 }
 #historia .stack > * + * {
   margin-top: var(--gap-3);
@@ -1490,91 +1490,10 @@ main {
    Responsive por breakpoints
    =========================== */
 
-/* ====== BASE: desktop 1920x1080 ====== */
+/* ===== BASE: desktop 1920x1080 ===== */
 .who-section {
   background: #f7f7f7; /* mismo color que el hero */
-  padding-block: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.who-section__inner {
-  display: grid;
-  grid-template-columns: 0.58fr 0.42fr; /* 58% img / 42% card */
-  align-items: center;
-  max-width: 1800px;
-  width: 100%;
-}
-
-/* Imagen */
-.who-section__media {
-  position: relative;
-  margin-left: 32px; /* aire del borde */
-  height: 380px;
-  overflow: hidden;
-  background: #f7f7f7;
-  transform: translateY(-20px); /* la subimos un toque */
-}
-
-.who-section__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left center;
-}
-
-/* Card */
-.who-section__card {
-  position: relative;
-  background: var(--color-accent);
-  color: #fff;
-  width: 620px; /* la estiramos horizontalmente */
-  max-width: 95%;
-  min-height: 320px;
-  margin-left: -80px; /* superpuesta sobre la imagen */
-  margin-right: 32px;
-  padding: 48px 40px 56px 40px;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  z-index: 2;
-  transform: translateY(20px); /* la bajamos para que parezca apoyada */
-}
-
-.who-section__card .pretitle {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.who-section__card h2 {
-  color: #fff;
-  font-size: 38px;
-}
-
-.who-section__card p {
-  color: rgba(255, 255, 255, 0.9);
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.55;
-  font-size: 1rem;
-}
-
-.who-section__cta {
-  display: inline-flex;
-  color: #fff;
-  text-decoration: underline;
-  margin-top: auto;
-}
-
-/* ===========================
-   QUIÉNES SOMOS (responsive)
-   =========================== */
-
-/* 1) DESKTOP BASE (≈1366–1920) */
-.who-section {
-  background: #f7f7f7;
-  padding-block: 40px;
+  padding-block: 32px;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -1582,203 +1501,131 @@ main {
 
 .who-section__inner {
   display: grid;
-  grid-template-columns: 0.58fr 0.42fr;
+  grid-template-columns: 0.58fr 0.42fr; /* 58% imagen / 42% card */
   align-items: center;
-  max-width: 1800px;
   width: 100%;
+  max-width: min(1800px, 94vw);
   position: relative;
 }
 
 /* Imagen */
 .who-section__media {
   position: relative;
-  margin-left: 32px;
+  margin-left: 2rem;
   height: 380px;
   overflow: hidden;
   background: #f7f7f7;
   transform: translateY(-20px);
 }
-
 .who-section__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: left center;
+  display: block;
 }
 
 /* Card */
 .who-section__card {
   position: relative;
-  background: var(--color-accent);
+  background: var(--color-accent); /* tu verde original */
   color: #fff;
-  width: 760px;
+  width: clamp(380px, 36vw, 760px);
   max-width: calc(100% + 60px);
+  min-height: 300px;
   margin-left: -80px;
-  margin-right: -36px;
-  padding: 36px 38px 0 38px;
-  box-shadow: var(--shadow);
+  margin-right: max(1rem, -36px);
+  padding: clamp(28px, 2.2vw, 48px) clamp(22px, 2.1vw, 40px);
+  border-radius: 10px;
+  box-shadow: var(--shadow, 0 10px 25px rgba(0,0,0,0.15));
   display: flex;
   flex-direction: column;
+  gap: clamp(0.5rem, 0.3rem + 0.6vw, 0.9rem);
   z-index: 2;
   transform: translateY(-18px);
 }
 
-.who-section__card .pretitle {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: clamp(0.8rem, 1vw, 0.95rem);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
+/* Fuerza el texto blanco, sin tocar tu color base */
+.who-section__card h2,
+.who-section__card p,
+.who-section__cta {
+  color: #fff;
 }
 
 .who-section__card h2 {
-  color: #fff;
-  font-size: clamp(2rem, 2.6vw, 2.45rem);
-  line-height: 1.05;
+  font-size: clamp(1.9rem, 1.2rem + 2vw, 2.6rem);
+  line-height: 1.1;
   max-width: 28rem;
   margin-bottom: 10px;
 }
-
 .who-section__card p {
-  color: rgba(255, 255, 255, 0.9);
   text-align: justify;
   text-justify: inter-word;
-  line-height: 1.5;
-  font-size: clamp(0.95rem, 1.05vw, 1rem);
-  max-width: 50rem;
+  line-height: 1.55;
+  font-size: clamp(0.95rem, 0.85rem + 0.3vw, 1.1rem);
   margin-bottom: 10px;
 }
-
 .who-section__cta {
   display: inline-flex;
-  color: #fff;
   text-decoration: underline;
-  margin-top: 4px;
-  margin-bottom: 0;
-  line-height: 1;
-  align-self: flex-start;
+  margin-top: auto;
   font-size: 0.95rem;
 }
 
-.who-section__card > *:last-child {
-  margin-bottom: 0;
-}
-
-/* 2) PANTALLAS GRANDES / 2K (≥2200px) */
+/* ===== PANTALLAS GRANDES / 2K (≥2200px) ===== */
 @media (min-width: 2200px) {
-  .who-section__inner {
-    max-width: 2100px;
-    grid-template-columns: 0.6fr 0.4fr;
-  }
-
-  .who-section__media {
-    margin-left: 48px;
-    height: 460px;
-    transform: translateY(-20px);
-  }
-
-  .who-section__card {
-    width: 850px;
+  .who-section__inner { max-width: min(2100px, 90vw); grid-template-columns: 0.6fr 0.4fr; }
+  .who-section__media { margin-left: 3rem; height: 460px; transform: translateY(-20px); }
+  .who-section__card  {
+    width: clamp(540px, 38vw, 850px);
     min-height: 360px;
     margin-left: -90px;
     padding: 56px 48px 60px 48px;
     transform: translateY(-20px);
   }
-
-  .who-section__card h2 {
-    font-size: 42px;
-  }
 }
 
-/* 1) LAPTOPS CHICAS / 1280–1439 */
-@media (max-width: 1439px) and (min-width: 1280px) {
-  .who-section__inner {
-    max-width: 1250px;
-    grid-template-columns: 1fr 0.38fr;
-  }
-
-  .who-section__media {
-    margin-left: 24px;
-    height: 400px;
-    transform: translateY(-14px);
-  }
-
-  .who-section__card {
-    width: 480px;
+/* ===== LAPTOPS CHICAS (1280–1439) ===== */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .who-section__inner { max-width: 1250px; grid-template-columns: 1fr 0.38fr; }
+  .who-section__media { margin-left: 1.5rem; height: 400px; transform: translateY(-14px); }
+  .who-section__card  {
+    width: clamp(420px, 33vw, 520px);
     margin-left: -70px;
     margin-right: 20px;
-    transform: translateY(-14px);
     padding: 44px 34px 48px 34px;
-  }
-
-  .who-section__card h2 {
-    font-size: 34px;
+    transform: translateY(-14px);
   }
 }
 
-/* 2) iPAD PRO HORIZONTAL (1024–1366px) */
+/* ===== iPAD PRO HORIZONTAL (1024–1366px) ===== */
 @media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
-  .who-section {
-    padding-block: 32px !important;
+  .who-section__inner { grid-template-columns: 1fr 0.25fr; max-width: 1100px; }
+  .who-section__media { margin-left: 0.75rem; height: 380px; transform: translateY(-8px); }
+  .who-section__card  {
+    justify-self: end;
+    width: 400px;
+    min-height: 260px;
+    transform: translateY(-8px);
   }
-
-  .who-section__inner {
-    display: grid !important;
-    grid-template-columns: 1fr 0.25fr !important;
-    max-width: 1100px !important;
-    width: 100% !important;
-  }
-
-  .who-section__media {
-    margin-left: 12px !important;
-    height: 380px !important;
-    transform: translateY(-8px) !important;
-    overflow: hidden !important;
-  }
-
-  .who-section__media img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: left center !important;
-  }
-
-  .who-section__card {
-    justify-self: end !important;
-    width: 400px !important;
-    min-height: 260px !important;
-    transform: translateY(-8px) !important;
-  }
-
-  .who-section__card h2 {
-    font-size: 26px !important;
-  }
-
-  .who-section__card p {
-    font-size: 0.93rem !important;
-  }
+  .who-section__card h2 { font-size: clamp(1.6rem, 1.2rem + 1.2vw, 1.9rem); }
+  .who-section__card p  { font-size: clamp(0.9rem, 0.85rem + 0.3vw, 0.95rem); }
 }
 
-/* 3) iPAD PRO VERTICAL (1024x1366) */
+/* ===== iPAD PRO VERTICAL (1024x1366) ===== */
 @media (min-width: 992px) and (max-width: 1180px) and (orientation: portrait) {
-  .who-section {
-    padding-block: 32px;
-  }
-
   .who-section__inner {
     display: block;
     width: 88vw;
     max-width: 720px;
     margin: 0 auto;
   }
-
   .who-section__media {
-    margin-left: 12px !important;
-    height: 380px !important;
-    transform: translateY(-8px) !important;
-    overflow: hidden !important;
+    margin-left: 0.75rem;
+    height: 380px;
+    transform: translateY(-8px);
+    overflow: hidden;
   }
-
   .who-section__card {
     width: 100%;
     max-width: 100%;
@@ -1787,117 +1634,32 @@ main {
     padding: 42px 30px 46px 30px;
     min-height: auto;
   }
-
-  .who-section__card h2 {
-    font-size: 32px;
-  }
-
-  .who-section__card p {
-    text-align: justify;
-  }
 }
 
-/* Landscape (992–1279) */
-@media (max-width: 1279px) and (min-width: 992px) and (orientation: landscape) {
-  .who-section {
-    padding-block: 32px;
-  }
-
-  .who-section__inner {
-    display: grid;
-    grid-template-columns: 2fr 0.8fr;
-    max-width: 1180px;
-    width: 100%;
-    margin: 0 auto;
-    gap: 0;
-    position: relative;
-  }
-
-  .who-section__media {
-    margin-left: 18px;
-    height: 360px;
-    transform: translateY(-10px);
-    overflow: hidden;
-    background: #f7f7f7;
-  }
-
-  .who-section__media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: left center;
-  }
-
-  .who-section__card {
-    justify-self: end;
-    width: 380px;
-    max-width: 100%;
-    min-height: 300px;
-    margin-left: -90px;
-    margin-right: 18px;
-    transform: translateY(16px);
-    padding: 32px 26px 40px 26px;
-    z-index: 2;
-  }
-
-  .who-section__card h2 {
-    font-size: 28px;
-  }
-
-  .who-section__card p {
-    text-align: justify;
-    line-height: 1.5;
-  }
-}
-
-/* 4) TABLET (768–991px) */
-@media (max-width: 991px) and (min-width: 768px) and (orientation: portrait) {
-  .who-section {
-    padding-block: 32px;
-  }
-
+/* ===== TABLET (768–991px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
   .who-section__inner {
     display: block;
     width: 92vw;
     max-width: 720px;
     margin: 0 auto;
   }
-
-  .who-section__media {
-    display: none;
-  }
-
+  .who-section__media { display: none; }
   .who-section__card {
     width: 100%;
-    max-width: 100%;
     margin: 0;
     transform: none;
     padding: 40px 28px 44px 28px;
     min-height: auto;
     text-align: left;
   }
-
-  .who-section__card p {
-    text-align: justify;
-  }
 }
 
-/* 5) MOBILE (<768px) */
+/* ===== MOBILE (<768px) ===== */
 @media (max-width: 767px) {
-  .who-section {
-    padding-block: 28px;
-  }
-
-  .who-section__inner {
-    display: block;
-    width: 92vw;
-    margin: 0 auto;
-  }
-
-  .who-section__media {
-    display: none;
-  }
-
+  .who-section { padding-block: 28px; }
+  .who-section__inner { display: block; width: 92vw; margin: 0 auto; }
+  .who-section__media { display: none; }
   .who-section__card {
     width: 100%;
     margin: 0;
@@ -1906,36 +1668,13 @@ main {
     padding: 36px 22px 40px 22px;
     border-radius: 10px;
     text-align: left;
+    background: var(--color-accent); /* mantiene tu verde */
   }
-
-  .who-section__card p {
-    text-align: left; /* justificado en mobile a veces queda feo */
+  .who-section__card h2,
+  .who-section__card p,
+  .who-section__cta {
+    color: #fff;
   }
+  .who-section__card p { text-align: left; }
 }
-
-/* Phones en horizontal → ocultar imagen y pasar a 1 columna */
-@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-height: 600px) {
-  .who-section .who-section__inner {
-    display: block;
-    width: 92vw;
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  .who-section .who-section__media {
-    display: none !important; /* kill-switch solo de la imagen */
-  }
-
-  .who-section .who-section__card {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    transform: none;
-    min-height: auto;
-    padding: 36px 22px 40px 22px;
-    text-align: left;
-  }
-}
-
-
 
