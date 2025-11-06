@@ -387,8 +387,8 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   display: grid;
   place-items: center;
   overflow: hidden;
-  min-height: clamp(280px, 48vh, 440px);
-  padding: clamp(60px, 16vw, 120px) 0;
+  min-height: clamp(340px, 55vh, 520px);
+  padding: clamp(72px, 18vw, 140px) 0;
   background-size: cover;
   background-position: center;
   color: #fff;
