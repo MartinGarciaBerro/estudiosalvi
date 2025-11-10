@@ -79,7 +79,7 @@
 
       <style>
         .team-wrapper {
-          width: min(1400px, 92vw);
+          width: min(1200px, 92vw);
           margin-inline: auto;
           padding: clamp(32px, 7vw, 88px) clamp(24px, 6vw, 72px);
           display: grid;
@@ -104,7 +104,9 @@
           border: 1px solid rgba(17, 17, 17, 0.08);
           box-shadow: 0 24px 44px -32px rgba(17, 17, 17, 0.22);
           display: grid;
-          grid-template-columns: clamp(420px, 48%, 640px) minmax(360px, 1fr);
+          grid-template-columns: clamp(320px, 36%, 440px) minmax(380px, 1fr);
+          max-width: 1040px;
+          margin-inline: auto;
           gap: 0;
           min-height: 0;
           overflow: hidden;
@@ -142,7 +144,7 @@
           display: flex;
           flex-direction: column;
           gap: var(--gap-4);
-          max-width: 80ch;
+          max-width: 76ch;
           padding: clamp(32px, 4vw, 64px);
           overflow: visible;
         }
@@ -183,16 +185,44 @@
           background-color: rgba(68, 126, 109, 0.08);
         }
 
+        @media (max-width: 1200px) {
+          .profile-card {
+            max-width: 920px;
+            grid-template-columns: clamp(280px, 34%, 380px) minmax(320px, 1fr);
+          }
+        }
+
         @media (max-width: 1024px) {
           .profile-card {
-            grid-template-columns: 1fr;
-            grid-template-rows: auto 1fr;
-            gap: clamp(20px, 6vw, 32px);
+            max-width: 820px;
+            grid-template-columns: minmax(220px, 40%) minmax(300px, 1fr);
+            gap: clamp(16px, 5vw, 28px);
           }
 
           .profile-content {
-            max-width: min(80ch, 100%);
-            padding: clamp(28px, 8vw, 44px);
+            max-width: none;
+            width: 100%;
+            padding: clamp(28px, 6vw, 44px);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .profile-card {
+            max-width: 700px;
+            grid-template-columns: minmax(200px, 42%) minmax(260px, 1fr);
+          }
+        }
+
+        @media (max-width: 600px) {
+          .team-wrapper {
+            padding: clamp(32px, 10vw, 56px) clamp(20px, 8vw, 40px);
+          }
+
+          .profile-card {
+            padding: clamp(24px, 8vw, 40px);
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            gap: clamp(20px, 6vw, 32px);
           }
 
           .profile-photo {
@@ -200,16 +230,9 @@
             height: auto;
             aspect-ratio: 3 / 4;
           }
-        }
 
-        @media (max-width: 640px) {
-          .team-wrapper {
-            padding: clamp(32px, 10vw, 56px) clamp(20px, 8vw, 40px);
-          }
-
-          .profile-card {
-            padding: clamp(24px, 8vw, 40px);
-            gap: clamp(20px, 6vw, 32px);
+          .profile-content {
+            padding: 0;
           }
         }
       </style>
@@ -342,7 +365,11 @@
               </div>
               <div class="profile-content">
                 <h2 class="profile-name" id="joaquin-garcia-berro-nombre">Joaqu&iacute;n Garc&iacute;a Berro</h2>
-                <p>Perfil pr&oacute;ximamente disponible.</p>
+                <p>Abogado recibido en la Universidad Católica Argentina, especialista en Derecho Penal y maestrando en Derecho Tributario por la misma universidad. <br><br>
+                  Ex funcionario en el fuero Criminal y Correccional Federal.
+              
+                  Profesor adjunto de Derecho Penal Parte General en la Universidad Católica Argentina. También profesor de Derecho Penal Parte Especial y Seminario de Práctica Profesional.
+                  Autor de diversos artículos doctrinarios.</p>
               </div>
             </article>
           </div>
