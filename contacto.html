@@ -88,26 +88,50 @@
                   <p>Arenales 1457, Recoleta, CABA</p>
                 </div>
               </div>
-              <form class="form-shell contact-form" action="mailto:info@estudiosalvi.com.ar" method="post" novalidate>
-                <div>
-                  <label for="nombre">Nombre</label>
-                  <input id="nombre" name="nombre" required autocomplete="name" aria-required="true" aria-invalid="false" placeholder="Ingrese su nombre">
-                </div>
-                <div>
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" required autocomplete="email" aria-required="true" aria-invalid="false" placeholder="Ingrese su email">
-                </div>
-                <div>
-                  <label for="asunto">Asunto</label>
-                  <input id="asunto" name="asunto" required aria-required="true" aria-invalid="false" placeholder="Ingrese su asunto">
-                </div>
-                <div>
-                  <label for="mensaje">Mensaje</label>
-                  <textarea id="mensaje" name="mensaje" rows="6" required aria-required="true" aria-invalid="false" placeholder="Ingrese su mensaje"></textarea>
-                </div>
-                <button type="submit" class="primary">Enviar</button>
-                <p class="form-feedback" aria-live="polite"></p>
-              </form>
+                <form class="form-shell contact-form" action="/contacto.php" method="POST" novalidate>
+                  <div>
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" required autocomplete="name" placeholder="Ingrese su nombre">
+                  </div>
+
+                  <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required autocomplete="email" placeholder="Ingrese su email">
+                  </div>
+
+                  <div>
+                    <label for="asunto">Asunto</label>
+                    <input id="asunto" name="asunto" required placeholder="Ingrese su asunto">
+                  </div>
+
+                  <div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Ingrese su mensaje"></textarea>
+                  </div>
+
+                  <!-- Honeypot anti-bots (ocúltalo con CSS si preferís) -->
+                  <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
+
+                  <!-- Timestamp (lo cargo con JS al cargar la página) -->
+                  <input type="hidden" name="started_at" id="started_at">
+
+                  <button type="submit" class="primary">Enviar</button>
+                  <p class="form-feedback" aria-live="polite"></p>
+                </form>
+
+                <script>
+                  // Carga el timestamp de inicio para filtrar bots ultra-rápidos
+                  document.getElementById('started_at').value = Math.floor(Date.now()/1000);
+                </script>
+
+                <style>
+                  /* Esconde honeypot sin usar display:none (algunos bots lo ignoran) */
+                  .hp-field {
+                    position: absolute !important;
+                    left: -9999px !important;
+                  }
+                </style>
+
             </div>
           </div>
         </div>
