@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es-AR">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,50 +88,98 @@
                   <p>Arenales 1457, Recoleta, CABA</p>
                 </div>
               </div>
-                <form class="form-shell contact-form" action="/contacto.php" method="POST" novalidate>
-                  <div>
-                    <label for="nombre">Nombre</label>
-                    <input id="nombre" name="nombre" required autocomplete="name" placeholder="Ingrese su nombre">
-                  </div>
+              <form class="form-shell contact-form" action="contacto.php" method="POST" novalidate>
+                <div>
+                  <label for="nombre">Nombre</label>
+                  <input id="nombre" name="nombre" required minlength="2" autocomplete="name" placeholder="Ingresá tu nombre">
+                </div>
 
-                  <div>
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="email" required autocomplete="email" placeholder="Ingrese su email">
-                  </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required autocomplete="email" placeholder="Ingresá tu email">
+                </div>
 
-                  <div>
-                    <label for="asunto">Asunto</label>
-                    <input id="asunto" name="asunto" required placeholder="Ingrese su asunto">
-                  </div>
+                <div>
+                  <label for="asunto">Asunto</label>
+                  <input id="asunto" name="asunto" required minlength="3" placeholder="Ingresá el asunto">
+                </div>
 
-                  <div>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Ingrese su mensaje"></textarea>
-                  </div>
+                <div>
+                  <label for="mensaje">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" rows="6" required minlength="10" placeholder="Ingresá tu mensaje"></textarea>
+                </div>
 
-                  <!-- Honeypot anti-bots (ocúltalo con CSS si preferís) -->
-                  <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
+                <!-- Honeypot anti-bots -->
+                <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
 
-                  <!-- Timestamp (lo cargo con JS al cargar la página) -->
-                  <input type="hidden" name="started_at" id="started_at">
+                <!-- Timestamp -->
+                <input type="hidden" name="started_at" id="started_at">
 
-                  <button type="submit" class="primary">Enviar</button>
-                  <p class="form-feedback" aria-live="polite"></p>
-                </form>
+                <button type="submit" class="primary">Enviar</button>
+                <p class="form-feedback" aria-live="polite"></p>
+              </form>
 
-                <script>
-                  // Carga el timestamp de inicio para filtrar bots ultra-rápidos
-                  document.getElementById('started_at').value = Math.floor(Date.now()/1000);
-                </script>
+              <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                // Timestamp para anti-bots
+                var startedAt = document.getElementById('started_at');
+                if (startedAt) startedAt.value = Math.floor(Date.now() / 1000);
 
-                <style>
-                  /* Esconde honeypot sin usar display:none (algunos bots lo ignoran) */
-                  .hp-field {
-                    position: absolute !important;
-                    left: -9999px !important;
+                var form = document.querySelector('.contact-form');
+                if (!form) return;
+
+                var fieldNames = ['nombre','email','asunto','mensaje'];
+                var fields = fieldNames.map(function (n) { return form.elements[n]; }).filter(Boolean);
+
+                // Asegurar mínimos
+                var minimums = { nombre: 2, asunto: 3, mensaje: 10 };
+                fields.forEach(function (f) {
+                  if (minimums[f.name] && !f.hasAttribute('minlength')) f.setAttribute('minlength', minimums[f.name]);
+                });
+
+                // Mensajes de validación
+                var messages = {
+                  nombre: { valueMissing: 'Ingresá tu nombre.', tooShort: 'El nombre debe tener al menos 2 caracteres.' },
+                  email:  { valueMissing: 'Ingresá tu email.',  typeMismatch: 'Ingresá un email válido.' },
+                  asunto: { valueMissing: 'Ingresá el asunto.', tooShort: 'El asunto debe tener al menos 3 caracteres.' },
+                  mensaje:{ valueMissing: 'Ingresá el mensaje.',tooShort: 'El mensaje debe tener al menos 10 caracteres.' }
+                };
+
+                function applyMessage(field) {
+                  field.setCustomValidity('');
+                  var v = field.validity, m = messages[field.name] || {};
+                  if (v.valueMissing) field.setCustomValidity(m.valueMissing || 'Revisá este campo.');
+                  else if (v.typeMismatch) field.setCustomValidity(m.typeMismatch || 'Revisá este campo.');
+                  else if (v.tooShort) field.setCustomValidity(m.tooShort || 'Revisá este campo.');
+                  return !field.checkValidity(); // true si hay error
+                }
+
+                fields.forEach(function (f) {
+                  f.addEventListener('input', function () { applyMessage(f); });
+                  f.addEventListener('blur',  function () { applyMessage(f); });
+                  f.addEventListener('invalid', function () { applyMessage(f); });
+                });
+
+                // Envío nativo controlado
+                form.addEventListener('submit', function (e) {
+                  e.preventDefault(); // control total
+                  var hasErrors = fields.some(function (f) { return applyMessage(f); });
+                  if (hasErrors || !form.checkValidity()) {
+                    form.reportValidity();
+                    return;
                   }
-                </style>
+                  form.submit(); // envía al PHP (sin redirección a gracias.html)
+                });
+              });
+              </script>
 
+              <style>
+                /* Esconde honeypot sin display:none */
+                .hp-field {
+                  position: absolute !important;
+                  left: -9999px !important;
+                }
+              </style>
             </div>
           </div>
         </div>
