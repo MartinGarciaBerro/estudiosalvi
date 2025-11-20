@@ -59,6 +59,18 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+body.quienes-page {
+  line-height: 1.5;
+}
+
+body.quienes-page .lead {
+  line-height: 1.55;
+}
+
+body.quienes-page p + p {
+  margin-top: var(--gap-2);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -412,6 +424,10 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   position: absolute;
   inset: 0;
   background: rgba(12, 20, 18, 0.45);
+}
+
+.quienes-page .hero-small::before {
+  background: rgba(12, 20, 18, 0.18);
 }
 
 .hero-small > * {
@@ -1293,10 +1309,6 @@ footer.site-footer {
   h1 { font-size: clamp(2.1rem, 8vw, 2.6rem); }
   header.site-header { background: #ffffff; }
 }
-
-.sticky-cta { position: fixed; inset: auto var(--gap-3) var(--gap-3) auto; display: none; }
-@media (max-width: 768px) { .sticky-cta { display: block; z-index: 1000; } }
-
 main {
   min-height: calc(100vh - 220px);
   display: block;
@@ -1307,6 +1319,11 @@ main {
 
 .section-header.text-center { text-align: center; margin-left: auto; margin-right: auto; }
 .section-header.text-center > * { margin-left: auto; margin-right: auto; }
+
+#equipo-destacado .stack > p {
+  text-align: center;
+  margin-inline: auto;
+}
 
 #historia .content-grid {
   display: grid;
@@ -1331,6 +1348,7 @@ main {
   display: grid;
   gap: clamp(16px, 2.5vw, 20px);
   align-content: start;
+  align-self: center;
 }
 #historia .fact-block {
   padding-left: 14px;
@@ -1670,5 +1688,4 @@ main {
   }
   .who-section__card p { text-align: left; }
 }
-
 
