@@ -32,7 +32,7 @@
     <!-- Favicon -->
     <link rel="icon" href="img/logo.avif" type="image/avif">
   </head>
-  <body id="top">
+  <body id="top" class="equipo-page">
     <a href="#main" class="skip-link">Saltar al contenido</a>
 
     <header class="site-header" role="banner">
@@ -52,7 +52,6 @@
             <li><a class="nav-link" href="./index.html">Inicio</a></li>
             <li><a class="nav-link" href="./quienes-somos.html">Qui&eacute;nes somos</a></li>
             <li><a class="nav-link" href="./equipo.html" aria-current="page">Equipo</a></li>
-            <li><a class="nav-link" href="./area.html">Áreas</a></li>
             <li><a class="nav-link" href="./clientes.html">Clientes</a></li>
             <li><a class="nav-link" href="./contacto.html">Contacto</a></li>
           </ul>
@@ -61,10 +60,10 @@
     </header>
 
     <main id="main" role="main">
-      <section class="hero-small" style="background-image: url('img/1.avif')" aria-label="Nuestro Equipo - Estudio Salvi">
+      <section class="hero-small hero-small--offset hero-small--tight" style="background-image: url('img/1.avif')" aria-label="Nuestro Equipo - Estudio Salvi">
         <div class="container stack" data-reveal>
-          <h1>Nuestro Equipo</h1>
-          <p class="lead">Profesionales con formaci&oacute;n acad&eacute;mica s&oacute;lida y amplia experiencia en derecho penal</p>
+          <h1>Nuestro equipo</h1>
+          <br>
         </div>
       </section>
 
@@ -234,6 +233,27 @@
             padding: 0;
           }
         }
+
+        .cta-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: clamp(14px, 2vw, 18px) clamp(36px, 6vw, 64px);
+          border-radius: 999px;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: clamp(1rem, 1.5vw, 1.1rem);
+          margin-bottom: clamp(48px, 8vw, 96px);
+          box-shadow: 0 18px 38px -20px rgba(17, 17, 17, 0.3);
+          transition: transform 200ms ease, box-shadow 200ms ease;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus-visible {
+          transform: translateY(-2px);
+          box-shadow: 0 24px 44px -18px rgba(17, 17, 17, 0.35);
+        }
       </style>
 
       <section class="team-directory" aria-label="Directorio del Estudio Salvi">
@@ -272,13 +292,7 @@
               </div>
               <div class="profile-content">
                 <h2 class="profile-name" id="maria-fiorito-nombre">Mar&iacute;a Fiorito</h2>
-                <p>Abogada por la Facultad de Derecho y Ciencias Sociales de la Universidad de Buenos Aires (2001), donde completó la Especialización en Derecho Penal.             
-                ​<br><br>
-                Inició su práctica profesional a temprana edad en el fuero Nacional en lo Criminal y Correccional Federal, donde ocupó durante seis años                diversos cargos. Su experiencia en el ámbito privado se inició en el Estudio Salvi y se destaca por la asistencia permanente a sus clientes,                tanto en la etapa preventiva como litigiosa.
-                ​<br><br>
-                Asimismo, dicta capacitaciones periódicas a directores de empresas en temas relacionados con las responsabilidades penales que les competen                 por sus cargos ejecutivos.
-                <br><br>
-                Realizó diversos cursos de actualización profesional, entre los que se encuentran el Curso de Especialización en Derecho Penal en la Universidad de Salamanca, España; el Curso de Posgrado de Crimen organizado, corrupción y terrorismo en la misma casa de estudios, el Programa Ejecutivo de Lavado de Activos y Financiamiento del Terrorismo, en la Universidad Torcuato Di Tella, Diplomatura de Compliance en la Universidad Austral y Diplomatura en Derecho 4.0 también en la Universidad Austral.</p>
+                <p>Abogada por la Facultad de Derecho y Ciencias Sociales de la Universidad de Buenos Aires (2001), donde completó la Especialización en Derecho Penal.​<br><br> Inició su práctica profesional a temprana edad en el fuero Nacional en lo Criminal y Correccional Federal. Su experiencia en el ámbito privado se inició en el Estudio Salvi y se destaca por la asistencia permanente a sus clientes, tanto en la etapa preventiva como litigiosa.​<br><br> Asimismo, dicta capacitaciones periódicas a directores de empresas en temas relacionados con las responsabilidades penales que les competen por sus cargos ejecutivos. <br><br> Realizó diversos cursos de actualización profesional, entre los que se encuentran el Curso de Especialización en Derecho Penal en la Universidad de Salamanca, España; el Curso de Posgrado de Crimen organizado, corrupción y terrorismo en la misma casa de estudios, el Programa Ejecutivo de Lavado de Activos y Financiamiento del Terrorismo, en la Universidad Torcuato Di Tella, Diplomatura de Compliance en la Universidad Austral y Diplomatura en Derecho 4.0 también en la Universidad Austral.</p>
                 <div class="profile-links">
                   <a href="https://www.linkedin.com/in/maria-fiorito-16334621/" aria-label="LinkedIn de Mar&iacute;a Fiorito">
                     <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
@@ -364,10 +378,7 @@
               </div>
               <div class="profile-content">
                 <h2 class="profile-name" id="joaquin-garcia-berro-nombre">Joaqu&iacute;n Garc&iacute;a Berro</h2>
-                <p>Abogado recibido en la Universidad Católica Argentina, especialista en Derecho Penal y maestrando en Derecho Tributario por la misma universidad. 
-Ex funcionario en el fuero Criminal y Correccional Federal. <br><br>
-Profesor adjunto de Derecho Penal Parte General en la Universidad Católica Argentina. También profesor de Derecho Penal Parte Especial y Seminario de Práctica Profesional.
-Autor de diversos artículos doctrinarios.</p>
+                <p>Abogado recibido en la Universidad Católica Argentina (2017), especialista en Derecho Penal y maestrando en Derecho Tributario por la misma universidad. <br><br> Inició su carrera profesional en el fuero Criminal y Correccional del Ministerio Público Fiscal de la Nación, para culminar su experiencia judicial como funcionario en un Tribunal Oral en lo Criminal Federal. Se incorporó al Estudio Salvi en el año 2025, desde entonces se enfoca el asesoramiento a clientes en los aspectos preventivos y litigiosos del Derecho Penal. <br><br> Profesor adjunto de Derecho Penal Parte General en la Universidad Católica Argentina. También es profesor de las materias Derecho Penal Parte Especial y el Seminario de Práctica Profesional, en la misma universidad. <br><br> Autor de diversos artículos doctrinarios y disertante en jornadas académicas.<br><br> Coautor del libro El Derecho Penal Económico del Siglo XXI. Editorial Ad-Hoc.</p>
                 <div class="profile-links">
                   <a href="https://www.linkedin.com/in/joaqu%C3%ADn-garc%C3%ADa-berro-b33547138/?originalSubdomain=ar" aria-label="LinkedIn de Joaqu&iacute;n Garc&iacute;a Berro">
                     <span aria-hidden="true"><i class="fab fa-linkedin"></i></span>
@@ -378,14 +389,9 @@ Autor de diversos artículos doctrinarios.</p>
           </div>
         </div>
       </section>
-
-      <section class="section alt" aria-labelledby="cta-title">
         <div class="container stack text-center" data-reveal>
-          <h2 id="cta-title">&iquest;Necesitas Asesoramiento Legal?</h2>
-          <p class="lead">Nuestro equipo est&aacute; listo para brindarte la mejor defensa y asesoramiento en derecho penal.</p>
           <a class="btn primary cta-button" href="./contacto.html">Contactar ahora</a>
         </div>
-      </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
@@ -399,7 +405,6 @@ Autor de diversos artículos doctrinarios.</p>
             <h3>Enlaces r&aacute;pidos</h3>
             <ul>
               <li><a href="./index.html">Inicio</a></li>
-              <li><a href="./area.html">&Aacute;reas</a></li>
               <li><a href="./quienes-somos.html">Qui&eacute;nes somos</a></li>
               <li><a href="./equipo.html">Equipo</a></li>
               <li><a href="./clientes.html">Clientes</a></li>
@@ -426,3 +431,4 @@ Autor de diversos artículos doctrinarios.</p>
     <script src="assets/js/app.js" defer></script>
   </body>
 </html>
+
