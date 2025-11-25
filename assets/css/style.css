@@ -1562,7 +1562,7 @@ main {
 @media (min-width: 1024px) and (max-width: 1599px) {
   .hero-banner {
 
-    min-height: clamp(450px, 65vh, 750px);
+    min-height: clamp(450px, 60vh, 750px);
   }
 }
 @media (min-width: 1600px) {
