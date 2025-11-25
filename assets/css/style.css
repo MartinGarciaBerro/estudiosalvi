@@ -411,7 +411,25 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   background-position: center;
   color: #fff;
 }
+/* Solo afecta a la sección que tenga esta clase extra */
+@media (max-width: 768px) {
+    .hero-small-d {
+        /* 1. Muestra la imagen completa */
+        
+        background-repeat: no-repeat !important;
+        background-position: center top !important;
 
+        /* 2. EL TRUCO MATEMÁTICO */
+        /* Tienes que poner aquí la proporción de TU imagen. 
+           Si tu imagen es de 1920x1080, la proporción es 16/9.
+           Si es 1000x500, es 2/1. */
+        aspect-ratio: 16 / 9; 
+        
+        /* 3. Reseteamos la altura fija si la tenías */
+        height: auto !important;
+        min-height: auto !important;
+    }
+}
 @media (min-width: 1920px) {
   .hero-small {
     min-height: clamp(420px, 60vh, 640px);
