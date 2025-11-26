@@ -638,7 +638,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   pointer-events: none;
   background:
     linear-gradient(180deg, rgba(247, 250, 249, 0.74), rgba(247, 250, 249, 0.84)),
-    url("../../img/7 Ptroleo web.jpg") center/cover no-repeat;
+    url("../../img/5\ Campo\ G\ web.jpg") center/cover no-repeat;
 }
 .section h2 { margin-bottom: var(--gap-2); }
 .section-header { max-width: 72ch; margin-bottom: var(--gap-4); }
