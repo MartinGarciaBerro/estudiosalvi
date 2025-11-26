@@ -339,6 +339,15 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
         min-height: auto !important;
     }
 }
+
+@media (max-width: 768px) {
+  .quienes-page .hero-small h1,
+  .quienes-page .hero-small h2,
+  .equipo-page .hero-small h1,
+  .equipo-page .hero-small h2 {
+    margin-top: clamp(52px, 14vw, 110px);
+  }
+}
 @media (min-width: 1920px) {
   .hero-small {
     min-height: clamp(420px, 60vh, 640px);
@@ -1275,10 +1284,10 @@ main {
 @media (min-width: 1024px) and (max-width: 1599px) {
   .hero-banner {
 
-    min-height: clamp(450px, 60vh, 750px);
+    min-height: clamp(440px, 62vh, 680px)
   }
   .hero-banner__media img {
-    object-position: center 30%;
+    object-position: center 35%;
   }
 }
 @media (min-width: 1600px) {
