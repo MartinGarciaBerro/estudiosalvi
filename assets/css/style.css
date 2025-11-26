@@ -1284,7 +1284,7 @@ main {
 @media (min-width: 1024px) and (max-width: 1599px) {
   .hero-banner {
 
-    min-height: clamp(550px, 65vh, 700px)
+    min-height: clamp(500px, 60vh, 700px)
   }
   .hero-banner__media img {
     object-position: center 35%;
