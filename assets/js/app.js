@@ -35,7 +35,7 @@ function setupMobileNav() {
 }
 
 function setupScrollReveal() {
-  const items = document.querySelectorAll('[data-reveal], .fade-in');
+  const items = document.querySelectorAll('[data-reveal]');
   if (!items.length) return;
 
   const normalizeTime = (value, fallbackUnit = 's') => {
