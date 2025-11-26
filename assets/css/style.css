@@ -320,6 +320,35 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   background-position: center;
   color: #fff;
 }
+
+/* Ajusta la posicion del hero de Quiens somos para que quede mas bajo */
+.quienes-page .hero-small {
+  align-items: end;
+  justify-items: center;
+  padding-top: clamp(96px, 30vh, 180px);
+  padding-bottom: clamp(48px, 16vh, 120px);
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) and (max-height: 720px) {
+  .quienes-page .hero-small {
+    padding-top: clamp(60px, 18vh, 120px);
+    padding-bottom: clamp(30px, 10vh, 72px);
+  }
+}
+
+@media (min-width: 1180px) and (max-height: 870px) {
+  .quienes-page .hero-small {
+    padding-top: clamp(72px, 22vh, 140px);
+    padding-bottom: clamp(12px, 4vh, 48px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1180px) {
+  .quienes-page .hero-small {
+    padding-top: clamp(84px, 26vh, 160px);
+    padding-bottom: clamp(20px, 7vh, 60px);
+  }
+}
 /* Solo afecta a la sección que tenga esta clase extra */
 @media (max-width: 768px) {
     .hero-small-d {
@@ -341,11 +370,23 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 }
 
 @media (max-width: 768px) {
+  .quienes-page .hero-small {
+    align-items: center;
+    padding: clamp(72px, 18vw, 140px) 0;
+  }
+
   .quienes-page .hero-small h1,
   .quienes-page .hero-small h2,
   .equipo-page .hero-small h1,
   .equipo-page .hero-small h2 {
     margin-top: clamp(52px, 14vw, 110px);
+  }
+}
+
+@media (max-width: 720px) and (min-height: 1000px) {
+  .quienes-page .hero-small {
+    align-items: center;
+    padding: clamp(72px, 18vw, 140px) 0;
   }
 }
 @media (min-width: 1920px) {
