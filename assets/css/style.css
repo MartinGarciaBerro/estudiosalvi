@@ -344,6 +344,16 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
         min-height: auto !important;
     }
 }
+/* Solo afecta a la sección que tenga esta clase extra */
+@media (max-width: 768px) {
+    .hero-small-f {
+        background-repeat: no-repeat !important;
+        background-position: center top !important;
+        aspect-ratio: 16 / 9;
+        height: auto !important;
+        min-height: auto !important;
+    }
+}
 
 
 @media (max-width: 768px) {
