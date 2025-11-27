@@ -93,21 +93,6 @@ a:hover, a:focus-visible { text-decoration: underline; }
 .container { width: var(--container); margin-inline: auto; padding-inline: var(--gap-4); }
 .stack > * + * { margin-top: var(--gap-4); }
 
-.skip-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(-120%);
-  padding: var(--gap-2) var(--gap-3);
-  background: var(--color-accent);
-  color: #fff;
-  font-weight: 600;
-  border-radius: 0 0 var(--radius-sm) 0;
-  transition: transform 0.2s ease;
-  z-index: 2000;
-}
-.skip-link:focus { transform: translateY(0); }
-
 .visually-hidden {
   position: absolute !important;
   width: 1px;
@@ -352,22 +337,14 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 /* Solo afecta a la sección que tenga esta clase extra */
 @media (max-width: 768px) {
     .hero-small-d {
-        /* 1. Muestra la imagen completa */
-        
         background-repeat: no-repeat !important;
-        background-position: center top !important;
-
-        /* 2. EL TRUCO MATEMÁTICO */
-        /* Tienes que poner aquí la proporción de TU imagen. 
-           Si tu imagen es de 1920x1080, la proporción es 16/9.
-           Si es 1000x500, es 2/1. */
-        aspect-ratio: 16 / 9; 
-        
-        /* 3. Reseteamos la altura fija si la tenías */
+        background-position: calc(50% + 133px) top !important;
+        aspect-ratio: 16 / 9;
         height: auto !important;
         min-height: auto !important;
     }
 }
+
 
 @media (max-width: 768px) {
   .quienes-page .hero-small {

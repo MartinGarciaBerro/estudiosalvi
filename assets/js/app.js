@@ -178,10 +178,6 @@ function setupAnchorOffsets() {
   }
 
   document.querySelectorAll('a[href^="#"]').forEach(link => {
-    if (link.classList.contains('skip-link')) {
-      return;
-    }
-
     link.addEventListener('click', event => {
       const hash = link.getAttribute('href');
       if (!hash || hash === '#') return;
