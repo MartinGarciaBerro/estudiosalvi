@@ -716,7 +716,7 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   pointer-events: none;
   background:
     linear-gradient(180deg, rgba(247, 250, 249, 0.74), rgba(247, 250, 249, 0.84)),
-    url("../../img/3 Puerto M web.jpg") center/cover no-repeat;
+    url("../../img/3\ Puerto\ M.jpeg") center/cover no-repeat;
 }
 
 .team-section .container {
@@ -1349,10 +1349,11 @@ body.quienes-page #historia + #mision {
 
 @media (min-width: 1024px) and (max-width: 1599px) {
   .hero-banner {
-    min-height: clamp(260px, 70vh, 600px);
+    min-height: clamp(260px, 55vh, 600px);
   }
   .hero-banner__media img {
-    object-position: center 40%;
+
+    object-position: center 45%;
   }
 }
 @media (min-width: 1600px) {
