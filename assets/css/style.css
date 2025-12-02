@@ -14,7 +14,7 @@
   --color-surface: #f7faf9;
   --color-accent: #4E917A;
   --color-accent-dark: #3A6D5B;
-  --header-height: clamp(68px, 7vw, 84px);
+  --header-height: clamp(54px, 5.5vw, 70px);
   --container: min(1100px, 92vw);
   --gap-1: 8px;
   --gap-2: 12px;
@@ -148,9 +148,9 @@ header.site-header {
   border-bottom: 1px solid rgba(17, 17, 17, 0.08);
   color: #111111;
 }
-.header-content { display: flex; align-items: center; justify-content: space-between; height: var(--header-height); gap: var(--gap-4); }
-.brand { display: inline-flex; align-items: center; gap: var(--gap-2); font-weight: 500; color: inherit; }
-.brand img { width: auto; height: clamp(48px, 6.5vw, 68px); }
+.header-content { display: flex; align-items: center; justify-content: space-between; height: var(--header-height); gap: var(--gap-2); }
+.brand { display: inline-flex; align-items: center; gap: calc(var(--gap-1) / 2); font-weight: 500; color: inherit; }
+.brand img { width: auto; height: clamp(40px, 5vw, 56px); }
 
 .nav-toggle {
   display: inline-flex;
@@ -244,7 +244,7 @@ header.site-header {
   .site-nav .nav-list {
     flex-direction: row;
     align-items: center;
-    gap: clamp(1.75rem, 3.2vw, 3.5rem);
+    gap: clamp(1.25rem, 2.2vw, 2.5rem);
     padding: 0;
     justify-content: flex-end;
   }
@@ -889,6 +889,15 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
 }
 .values-grid { display: grid; gap: var(--gap-4); }
 @media (min-width: 768px) { .values-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+body.quienes-page #valores.section {
+  padding-bottom: clamp(36px, 8vw, 88px);
+}
+body.quienes-page #valores .values-grid {
+  margin-top: clamp(28px, 6vw, 60px);
+}
+body.quienes-page #valores + #equipo-destacado {
+  margin-top: 0;
+}
 .value-card { background: #fff; border-radius: var(--radius-sm); padding: var(--gap-4); box-shadow: var(--shadow); display: grid; gap: var(--gap-2); }
 .value-card h3 { font-size: clamp(1.25rem, 2vw, 1.45rem); }
 
@@ -1194,6 +1203,10 @@ main {
   margin-inline: auto;
 }
 
+body.quienes-page #equipo-destacado .btn.primary {
+  margin-bottom: clamp(24px, 4vw, 48px);
+}
+
 #historia .content-grid {
   display: grid;
   gap: var(--gap-5);
@@ -1273,6 +1286,19 @@ main {
   margin-top: var(--gap-3);
 }
 
+body.quienes-page #historia.section {
+  padding-bottom: clamp(4px, 1vw, 16px);
+  margin-bottom: 0;
+}
+
+body.quienes-page #mision.section {
+  padding-top: clamp(4px, 1vw, 16px);
+}
+
+body.quienes-page #historia + #mision {
+  margin-top: calc(-1 * var(--gap-2));
+}
+
 .mission-wrap { display: grid; gap: clamp(32px, 7vw, 60px); }
 .mission-intro { display: grid; gap: var(--gap-3); max-width: 68ch; }
 .mission-panels { display: grid; gap: var(--gap-4); }
@@ -1323,7 +1349,7 @@ main {
 
 @media (min-width: 1024px) and (max-width: 1599px) {
   .hero-banner {
-    min-height: clamp(260px, 53vh, 640px);
+    min-height: clamp(260px, 62vh, 720px);
   }
   .hero-banner__media img {
     object-position: center 35%;
