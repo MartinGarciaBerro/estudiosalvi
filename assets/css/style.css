@@ -1349,10 +1349,10 @@ body.quienes-page #historia + #mision {
 
 @media (min-width: 1024px) and (max-width: 1599px) {
   .hero-banner {
-    min-height: clamp(300px, 80vh, 900px);
+    min-height: clamp(260px, 70vh, 600px);
   }
   .hero-banner__media img {
-    object-position: center 35%;
+    object-position: center 40%;
   }
 }
 @media (min-width: 1600px) {
