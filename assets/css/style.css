@@ -334,6 +334,14 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
     padding-bottom: clamp(20px, 7vh, 60px);
   }
 }
+@media (min-width: 1024px) {
+  .quienes-page .hero-small {
+    min-height: clamp(540px, 72vh, 820px);
+    padding-top: clamp(140px, 34vh, 260px);
+    padding-bottom: clamp(28px, 6vh, 72px);
+    background-position: center ;
+  }
+}
 /* Solo afecta a la sección que tenga esta clase extra */
 @media (max-width: 768px) {
     .hero-small-d {
@@ -657,11 +665,14 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   margin-top: calc(var(--gap-4) + var(--gap-2));
 }
 .section { padding-block: clamp(20px, 4vw, 44px); position: relative; }
+.section--compact { padding-block: clamp(0px, 1vw, 12px); }
+.section--compact .stack > * + * { margin-top: 6px; }
+.section--compact h2 { margin-bottom: var(--gap-1); }
 .section.alt { background: var(--color-surface); }
 .section.alt.sectores {
   position: relative;
   isolation: isolate;
-  padding-block: clamp(36px, 7vw, 80px);
+  padding-block: clamp(24px, 5vw, 60px);
   display: grid;
   align-items: center;
   background: #f7faf9;
@@ -1540,4 +1551,5 @@ main {
   }
   .who-section__card p { text-align: left; }
 }
+
 
