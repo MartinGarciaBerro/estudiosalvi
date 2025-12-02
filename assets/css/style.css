@@ -665,8 +665,8 @@ button.primary:hover { background: var(--color-accent-dark); transform: translat
   margin-top: calc(var(--gap-4) + var(--gap-2));
 }
 .section { padding-block: clamp(20px, 4vw, 44px); position: relative; }
-.section--compact { padding-block: clamp(0px, 1vw, 12px); }
-.section--compact .stack > * + * { margin-top: 6px; }
+.section--compact { padding-block: clamp(8px, 2vw, 24px); }
+.section--compact .stack > * + * { margin-top: var(--gap-2); }
 .section--compact h2 { margin-bottom: var(--gap-1); }
 .section.alt { background: var(--color-surface); }
 .section.alt.sectores {
@@ -1291,7 +1291,7 @@ main {
 .hero-banner {
   position: relative;
   width: 100%;
-  min-height: clamp(320px, 60vh, 760px);
+  min-height: clamp(260px, 44vh, 560px);
   background: #f2f2f2;
   overflow: hidden;
   isolation: isolate;
@@ -1323,8 +1323,7 @@ main {
 
 @media (min-width: 1024px) and (max-width: 1599px) {
   .hero-banner {
-
-    min-height: clamp(500px, 60vh, 700px)
+    min-height: clamp(260px, 53vh, 640px);
   }
   .hero-banner__media img {
     object-position: center 35%;
@@ -1332,7 +1331,12 @@ main {
 }
 @media (min-width: 1600px) {
   .hero-banner {
-    min-height: clamp(360px, 65vh, 760px);
+    min-height: clamp(260px, 60vh, 560px);
+  }
+}
+@media (min-width: 1930px) {
+  .hero-banner {
+    min-height: clamp(260px, 80vh, 760px);
   }
 }
 /* ===========================
@@ -1348,6 +1352,7 @@ main {
   justify-content: center;
   overflow: hidden;
 }
+.home .who-section { padding-top: 0; }
 
 .who-section__inner {
   display: grid;
