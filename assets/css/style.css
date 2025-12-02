@@ -1332,7 +1332,7 @@ body.quienes-page #historia + #mision {
   width: 100%;
   height: 100%;
   object-fit: cover ;
-  object-position: center 42%;
+  object-position: center 40%;
   display: block;
 }
 
@@ -1358,7 +1358,7 @@ body.quienes-page #historia + #mision {
 }
 @media (min-width: 1600px) {
   .hero-banner {
-    min-height: clamp(260px, 60vh, 560px);
+    min-height: clamp(260px, 65vh, 660px);
   }
 }
 @media (min-width: 1930px) {
@@ -1583,5 +1583,3 @@ body.quienes-page #historia + #mision {
   }
   .who-section__card p { text-align: left; }
 }
-
-
